@@ -1,0 +1,77 @@
+{
+  "name": "msa-safety",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "antd": "^4.4.2",
+    "axios": "^0.21.0",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "form-data": "^3.0.0",
+    "joi": "^17.3.0",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2",
+    "puppeteer": "^5.5.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-hook-form": "^6.11.0",
+    "react-modal": "^3.12.1",
+    "react-modal-hook": "^3.0.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.3",
+    "react-spinners": "^0.11.0",
+    "styled-components": "^5.1.1",
+    "uuid": "^8.3.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "dev": "REACT_APP_THREEKIT_HOST=http://preview.threekit.com react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "build:deploy": "webpack --config ./webpack.config.js --mode production",
+    "docs": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/plugin-transform-runtime": "^7.11.5",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-react": "^7.10.4",
+    "@storybook/addon-actions": "^6.0.22",
+    "@storybook/addon-essentials": "^6.0.22",
+    "@storybook/addon-links": "^6.0.22",
+    "@storybook/addons": "^6.0.22",
+    "@storybook/node-logger": "^6.0.22",
+    "@storybook/preset-create-react-app": "^3.1.4",
+    "@storybook/react": "^6.0.22",
+    "autoprefixer": "^10.0.1",
+    "babel-plugin-import": "^1.13.0",
+    "css-loader": "^4.3.0",
+    "file-loader": "^6.1.0",
+    "less": "^3.12.2",
+    "less-loader": "^7.0.1",
+    "postcss-loader": "^4.0.2",
+    "react-is": "^16.13.1",
+    "style-loader": "^1.2.1",
+    "url-loader": "^4.1.0",
+    "webpack-cli": "^3.3.12"
+  }
+}
