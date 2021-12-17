@@ -3,6 +3,7 @@ import {
   Wrapper,
   ButtonsRow,
   ButtonWrapper,
+  ButtonGearWrapper,
 } from './radioButtonsImages.styles';
 import icnImgMissing from '../assets/no-image.webp';
 
@@ -11,16 +12,22 @@ const RadioButtonsImages = ({ options, value, onChange }) => {
   const THUMBNAIL_MAP = {
     'Athletix': 'https://source360-msa.azurewebsites.net/assets/athletix.png',
     'Jacket': 'https://source360-msa.azurewebsites.net/assets/jacket.png',
-    'Pants': "https://source360-msa.azurewebsites.net/assets/pants.png" ,
+    'Pants': "https://source360-msa.azurewebsites.net/assets/pants.png" 
+    
+  };
+  
+  const THUMBNAIL_COLORMAP = {
     'Black': 'https://source360-msa.azurewebsites.net/assets/pbi-black.png',
     'Gold': 'https://source360-msa.azurewebsites.net/assets/pbi-gold.png'
   };
-  
+
   return (
     <Wrapper>
       <ButtonsRow>
         {options.map(({ label, img, value: val }, i) => (
-          <ButtonWrapper
+         <div>
+           {((val === 'Pants') || (val === 'Jacket') || (val === 'Athletix') )  ? 
+           <ButtonGearWrapper
             key={i}
             selected={ (!value || value === undefined) && i === 0? true : val === value }
             onClick={(e) => { 
@@ -35,7 +42,30 @@ const RadioButtonsImages = ({ options, value, onChange }) => {
               <img src={THUMBNAIL_MAP[label] || icnImgMissing} alt={label} />
             </div>
             <div>{label}</div>
+          </ButtonGearWrapper> :
+          
+          <ButtonWrapper
+            key={i}
+            selected={ (!value || value === undefined) && i === 0? true : val === value }
+            onClick={(e) => { 
+              if ((val === 'Pants') || (val === 'Jacket') || (val === 'Athletix') ) {
+                localStorage.setItem('gearSelected', val);
+              }
+              localStorage.setItem('isClickEvent', 'true');
+              onChange(val) 
+            }}
+          >
+            <div>
+              <img src={THUMBNAIL_COLORMAP[label] || icnImgMissing} alt={label} />
+            </div>
+            <div>{label}</div>
           </ButtonWrapper>
+          
+          
+          }
+          
+         </div>
+        
         ))}
       </ButtonsRow>
     </Wrapper>

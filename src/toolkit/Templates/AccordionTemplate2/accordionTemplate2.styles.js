@@ -22,6 +22,7 @@ export const PlayerWrapper = styled.div`
     margin-top:8rem;
     /* margin: 0 auto; */
     float:left;
+    border : 1px solid grey;
   }
 `;
 

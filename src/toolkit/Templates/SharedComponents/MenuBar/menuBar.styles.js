@@ -21,7 +21,7 @@ export const PrimaryBarItem = styled.div`
   top: 50%;
   transform: translateY(-50%); */
   text-transform: uppercase;
-  color: ${props => (props.selected ? '#00A94E' : '#57585A')};
+  color: ${props => (props.selected ? 'white':'#00A94E')};
 
   cursor: ${props => (props.disabled ? 'default' : 'pointer')};
   opacity: ${props => (props.disabled ? 0.5 : 1)};
@@ -58,15 +58,15 @@ export const SecondaryBar = styled.div`
   visibility: ${props => (props.show ? 'visible' : 'hidden')};
 `;
 
-export const SecondaryBarItem = styled.button`
+export const SecondaryBarItem = styled.div`
   margin-right:6px;
   height:3rem;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
   text-transform: uppercase;
-  box-shadow: 5px 10px 18px grey;
-  color: ${props => (props.selected ? 'white' : '#333333')};
+  
+  color: ${props => (props.selected ? 'white' : 'green')};
   background-color: ${props => (props.selected ? 'green' : 'white')};
   border-color: ${props => (props.selected ? 'green' : 'white')};
   cursor: ${props => (props.disabled ? 'default' : 'pointer')};
