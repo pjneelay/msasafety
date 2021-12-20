@@ -1,6 +1,6 @@
 .homepage {
-    /*background-image: url("../../../assets/background.png");*/
-    background-color: black;
+    background-image: url("../assets/background.jpg");
+    
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -12,12 +12,44 @@
   
   .logo {
     width: 14rem;
-    height: auto;
-    position: absolute;
-    top: 3rem;
-    left: 10%;
+    background-color: black;
+    margin-left: 3rem;
   }
   
+  .menuoption{
+    position:relative;
+  }
+
+  .menuoption img:active {
+    border-color: #00A94E;
+    border:3px solid #00A94E;
+    
+  }
+  .menuoption img{
+    width:20rem;
+    height:30rem;
+    float:left;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    box-shadow: 3px 2px 5px 0 lightgrey;
+  }
+
+  .menuoption h2{
+    position:absolute;
+    margin-top: 28rem;
+    color:grey;
+    font-weight:bolder !important;
+  }
+
+  .menuoption h2:active {
+    color: #00A94E;
+   
+  }
+
+  .menu{
+    margin-top: 10rem;
+    margin-left: 25rem;
+  }
   .logo img {
     width: 100%;
     height: 100%;
@@ -31,11 +63,6 @@
     }
   }
   
-  .preset-buttons {
-    margin-top: 1rem;
-    display: flex;
-    justify-content: center;
-  }
   
   .btn-white {
     text-transform: uppercase;

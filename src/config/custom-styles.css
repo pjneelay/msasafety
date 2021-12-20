@@ -464,9 +464,10 @@ footer{
 }
 
 .header-gear{
-    text-align: center;
+    color:#00A94E;
     padding-top: 15px;
     font-size: 18px;
+    font-weight: bold;
 }
 
 /* On screens that are 600px or less, set the background color to olive */
