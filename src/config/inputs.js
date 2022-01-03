@@ -826,7 +826,7 @@ export default {
   lettersAColor: {
     label: 'Letters Color',
     attribute: 'Row A Color Input',
-    type: 'radioButtons',
+    type: 'RadioButtonsImages',
     data: 'tk-platform',
   },
 
@@ -840,7 +840,7 @@ export default {
   lettersBColor: {
     label: 'B Letters Color',
     attribute: 'Row B Color Input',
-    type: 'radioButtons',
+    type: 'RadioButtonsImages',
     data: 'tk-platform',
   },
 
@@ -861,7 +861,7 @@ export default {
   lettersCColor: {
     label: 'C Letters Color',
     attribute: 'Row C Color Input',
-    type: 'radioButtons',
+    type: 'RadioButtonsImages',
     data: 'tk-platform',
   },
 
@@ -904,7 +904,7 @@ export default {
   lettersEColor: {
     label: 'E Letters Color',
     attribute: 'Row E Color Input',
-    type: 'radioButtons',
+    type: 'RadioButtonsImages',
     data: 'tk-platform',
   },
 
@@ -927,7 +927,7 @@ export default {
   lettersFColor: {
     label: 'F Letters Color',
     attribute: 'Row F Color Input',
-    type: 'radioButtons',
+    type: 'RadioButtonsImages',
     data: 'tk-platform',
   },
 
@@ -1008,7 +1008,7 @@ export default {
   lettersColor: {
     label: 'Letters Color',
     attribute: 'Patch Lettering Color Input',
-    type: 'radioButtons',
+    type: 'RadioButtonsImages',
     data: 'tk-platform',
     optionNumber: {
       'Lime/Yellow': 'NA',

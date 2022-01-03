@@ -38,12 +38,15 @@ export {
 const DefaultInputContainer = ({ label, description, children }) => {
   return (
     <Wrapper className={`input-component ${label.split(' ').join('-').toLowerCase()}`}>
-      {/*label && <Label className="input-label">{label}</Label>*/}
+      {label.includes('Letters Size') && <Label className="input-label">LETTERS SIZE</Label>}
+      {label.includes('Letters Color') && <Label className="input-label">LETTERS COLOR</Label>}
       {description && (
         <Description className="input-description">{description}</Description>
       )}
       <InputWrapper>{children}</InputWrapper>
+  
     </Wrapper>
+  
   );
 };
 

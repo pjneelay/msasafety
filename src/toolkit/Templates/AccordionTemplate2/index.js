@@ -357,7 +357,7 @@ const AccordionTemplate2 = ({
         
         {window.threekitApi? 
         <div>
-          <div style={{left:'0',position:'absolute',bottom:'15px',float:'left'}}>
+          <div style={{left:'0',position:'absolute',bottom:'15px',float:'left'}} className='zoom-wrapper'>
              <button style={{borderRadius:'5px',fontSize:'larger',border:'0'}} onClick={() => zoomAndControllers(2)}><PlusOutlined style={{borderRadius:'5px'}}/></button><br></br>
              <button style={{borderRadius:'5px',fontSize:'larger',border:'0'}} onClick={() => zoomAndControllers(-2)}><MinusOutlined style={{borderRadius:'5px'}}/></button>
           </div>
@@ -389,7 +389,7 @@ const AccordionTemplate2 = ({
           )}
           
           <div className='configuration-wrapper'>
-          <div style={{color:'red',marginLeft:'12rem'}}>*Swipe down and save your design</div>
+          <div style={{color:'red',textAlign:'center'}}>*Swipe down and save your design</div>
             {newConfiguration.map((item, index) => (
               <div key={index} className='group'>
                 {groupTitle !== item.optionGroup ? <div className='header-gear'>{gearHeader(item)}</div> : null}
