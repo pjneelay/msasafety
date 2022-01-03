@@ -10,7 +10,7 @@ export default {
   // authToken: 'f026609b-7611-4a0a-aae0-8f36e3208393',
   // Local
   
-  authToken: window.location.hostname == 'msasafety' ? 'dd4c07cd-f7e0-4668-b52d-e9f54b3decb2' : 'e8d26c36-e722-41ef-917b-bab77f0cea99',
+  authToken: window.location.hostname == 'msasafety.herokuapp.com' ? 'dd4c07cd-f7e0-4668-b52d-e9f54b3decb2' : 'e8d26c36-e722-41ef-917b-bab77f0cea99',
   assetId: '6b7bdb94-44eb-4713-b192-91c78c2dd967',
   orgId,
 };
