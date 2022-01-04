@@ -555,7 +555,7 @@ const AccordionTemplate2 = ({
       
         </div>
         </div>
-        :   <div><div> <ClipLoader size={155} css={override} color={'#00A94E'}/></div><div style={{marginLeft:'50px'}}><h2>Loading...</h2></div></div>
+        :   <div><div> <ClipLoader size={155} css={override} color={'#00A94E'}/></div><div className="Loader" style={{marginLeft:'50px'}}><h2>Loading...</h2></div></div>
        }
       </Wrapper>
       <div></div>

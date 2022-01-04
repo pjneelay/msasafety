@@ -18,7 +18,7 @@ const Homepage = () => {
                         <Link to="/athletix">
                             <img  src="https://source360-msa.azurewebsites.net/assets/athletix.png"/>
                             <div>
-                                <h2 style={{marginLeft:'9rem'}}>ATHLETIX</h2>
+                                <h2 className="head1" style={{marginLeft:'9rem'}}>ATHLETIX</h2>
                             </div>
                         </Link>
                      </div>
@@ -27,7 +27,7 @@ const Homepage = () => {
                         <Link to="/">
                             <img  src={jacket}/>
                             <div>
-                                <h2 style={{marginLeft:'30rem'}}>GX3 COAT</h2>
+                                <h2 className="head2" style={{marginLeft:'30rem'}}>GX3 COAT</h2>
                             </div>
                         </Link>
                     </div>
@@ -36,7 +36,7 @@ const Homepage = () => {
                         <Link to="/">
                             <img  src={pant}/>
                             <div>
-                                <h2 style={{marginLeft:'53rem'}}>GX3 PANT</h2>
+                                <h2 className="head3" style={{marginLeft:'53rem'}}>GX3 PANT</h2>
                             </div>
                         </Link>
                     </div>

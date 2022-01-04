@@ -432,7 +432,7 @@ button, a, h1, h2, h3 {
     cursor: pointer;
     transition: all 0.3s;
     background:white;
-    color:#00A94E;
+    color:#858990;
     transform: translateY(-4px);
     display: inline-block;
     min-width: 200px;
@@ -535,8 +535,68 @@ footer{
     #root .zoom-wrapper{
         bottom:156px !important;
     }
+    #root .head1{
+        margin-top: 17.5rem !important;
+        margin-left:9rem !important;
+        font-size: 17px !important;
+    }
+    #root .head2{
+        margin-top: 37rem !important;
+        margin-left:9rem !important;
+        font-size: 17px !important;
+    }
+
+    #root .head3{
+        margin-top: 58rem !important;
+        margin-left:9rem !important;
+        font-size: 17px !important;
+    }
+
+    #root .menu{
+        margin-top: 0rem;
+        margin-left: 1.5rem;
+    }
+
+    #root .menuoption img{
+       height:20rem !important;
+       padding-bottom: 1rem;
+    }
+
+    #root .homepage{
+        min-height: 100% !important;
+        height:auto !important;
+    }
 }
 
+@media screen and (min-width: 720px) and (max-width:1285px){
+    #root .menu{
+        margin-top: 0rem;
+        margin-left:0rem;
+    }
+
+    #root .menuoption img{
+        width:18rem;
+        height:26rem;
+     }
+}
+@media screen and (min-width: 685px) and (max-width:940px){
+    
+
+    #root .menuoption img{
+        width:14rem;
+        height:26rem;
+     }
+     #root .head1{
+       margin-left:5rem !important;
+    }
+    #root .head2{
+       margin-left:21rem !important;
+    }
+    #root .head3{
+       margin-left:38rem !important;
+    }
+    
+}
 @media screen and (max-width: 1024px) {
     #root .secondary-bar-wrapper {
         display: flex;

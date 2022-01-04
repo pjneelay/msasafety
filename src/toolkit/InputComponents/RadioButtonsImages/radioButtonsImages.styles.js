@@ -29,7 +29,7 @@ export const ButtonWrapper = styled.div`
     border-radius: 50%;
 
     img {
-      width: 60%;
+      width: 50%;
       object-fit: contain;
       border-radius:50%;
       border: 2px solid 

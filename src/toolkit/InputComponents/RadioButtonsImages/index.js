@@ -6,6 +6,8 @@ import {
   ButtonGearWrapper,
 } from './radioButtonsImages.styles';
 import icnImgMissing from '../assets/no-image.webp';
+import LimeColor from '../assets/Lime.png';
+import orangeColor from '../assets/orange.png';
 
 const RadioButtonsImages = ({ options, value, onChange }) => {
   if (!options || options.length === 0) return null;
@@ -18,8 +20,11 @@ const RadioButtonsImages = ({ options, value, onChange }) => {
   
   const THUMBNAIL_COLORMAP = {
     'Black': 'https://source360-msa.azurewebsites.net/assets/pbi-black.png',
-    'Gold': 'https://source360-msa.azurewebsites.net/assets/pbi-gold.png'
+    'Gold': 'https://source360-msa.azurewebsites.net/assets/pbi-gold.png',
+    'Lime/Yellow': LimeColor,
+    'Red/Orange': orangeColor
   };
+
 
   return (
     <Wrapper>
