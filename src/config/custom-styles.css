@@ -32,12 +32,15 @@ button, a, h1, h2, h3 {
   }
 
 #root .player-container:not(.summary) {
-    min-height: calc(100vh - 240px);
+    min-height: calc(100vh - 120px);
     position:relative;
     flex-wrap: wrap !important;
-    
-    
+    grid-gap: 0px;
+    margin: 0;
 }
+.col-padding{
+    padding-left: 9%;
+  }
 .template-title {
     color: #000000;
     text-transform: uppercase;
@@ -53,7 +56,7 @@ button, a, h1, h2, h3 {
 }
 
 #root .player-container.summary .disclaimer {
-    display: block;
+    /*display: block;*/
     text-align: center;
     height: max-content !important;
     font-size: 13px;
@@ -70,10 +73,21 @@ button, a, h1, h2, h3 {
 .template-subtitle + div {
     border-bottom: none;
 }
+#root .player-container.summary .zoom-wrapper {
+    margin-top: 5vw !important;
+}
+
+#root .player-container.summary .container{
+    float:right;
+    width:45vw !important;
+    margin-top: 0;
+   }
 
 
 #player-root {
-    height: 600px;
+    margin-top: 0;
+    min-height: 100%;
+    width: 50vw;
 }
 
 #root.just-jacket-selected .item-pants,
@@ -179,10 +193,11 @@ button, a, h1, h2, h3 {
 
 /* Sumary Section */
 #root .summary {
-    display: block;
+   /* display: block;*/
     width: max-content;
     position:relative;
-    min-height: calc(100vh - 240px);
+    min-height: calc(100vh - 120px);
+    float:right;
 }
 
 #root .summary > div {
@@ -201,12 +216,11 @@ button, a, h1, h2, h3 {
     display: block;
     position: relative;
     overflow-y: auto;
-    margin-top: 10rem;
+    
     height:600px;
 }
 #root .regular-wapper{
-    height:36rem;
-    margin-top: 8rem;
+    height:calc(100vh - 240px);
     display: block;
     position: relative;
     overflow-y: auto;
@@ -419,6 +433,14 @@ button, a, h1, h2, h3 {
     position: absolute;
     background: black;
 }
+.three-d-player-space .zoom-wrapper{
+    left: 5%;
+    top: 75%;
+    width: 600px; 
+    height: 0;
+    max-width: 0; 
+    margin-top: 7vw; 
+}
 
 .next-btn {
     padding: 10px 10px; 
@@ -468,6 +490,19 @@ footer{
     padding-top: 15px;
     font-size: 18px;
     font-weight: bold;
+}
+#root .secondary-bar-wrapper{
+    justify-content: inherit;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #d3d4d3;
+    height: max-content;
+    padding: 50px 0 5px 4%;
+}
+#root .secondary-bar-wrapper .secondary-bar-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 2% 5%;
 }
 
 /* On screens that are 600px or less, set the background color to olive */
@@ -525,7 +560,7 @@ footer{
 
     #root .secondary-bar-wrapper{
         font-size: 11px !important;
-        
+        padding-left: 5px;
     }
 
     #root .summary .summary-wrapper{
@@ -533,7 +568,7 @@ footer{
     }
 
     #root .zoom-wrapper{
-        bottom:156px !important;
+      /*  bottom:156px !important;*/
     }
     #root .head1{
         margin-top: 17.5rem !important;
@@ -601,7 +636,7 @@ footer{
     #root .secondary-bar-wrapper {
         display: flex;
         flex-wrap: wrap;
-        height: 79px;
+        
         flex-direction: column;
     }
     #root .three-d-player-space {

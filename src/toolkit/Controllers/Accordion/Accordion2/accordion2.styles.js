@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Wrapper = styled.div`
   height: max-content;
   border-bottom: 1px solid #d3d4d3;
-  width: 420px;
+  width: 100%;
   margin-bottom: 25px;
 
   & > div:nth-child(1) {

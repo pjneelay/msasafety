@@ -19,7 +19,7 @@ export const PlayerWrapper = styled.div`
     height: 400px;
     max-height: 100vh;
     max-width: 60vw;
-    margin-top:8rem;
+   
     /* margin: 0 auto; */
     float:left;
   }

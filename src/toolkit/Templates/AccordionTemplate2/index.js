@@ -21,6 +21,8 @@ import {
   PlusOutlined,
   MinusOutlined,
 } from '@ant-design/icons';
+import { SecondaryBar, SecondaryBarItem } from '../SharedComponents/MenuBar/menuBar.styles';
+
 const AccordionTemplate2 = ({
   title,
   subtitle,
@@ -329,14 +331,14 @@ const AccordionTemplate2 = ({
       <header>
         <img src={globeLockupLogo} className="header-logo" alt="" />
         <MenuBar
-        primaryOptions={controller.map(({ label }) => label)}
-        primarySelected={activeAddress[0]}
-        secondaryOptions={secondaryOptions}
-        secondarySelected={activeAddress[1]}
-        handleClickPrimary={val => setActiveAddress([val, 0])}
-        handleClickSecondary={val => setActiveAddress([activeAddress[0], val])}
-        handleSetAttribute={handleSetAttribute}
-      />
+          primaryOptions={controller.map(({ label }) => label)}
+          primarySelected={activeAddress[0]}
+          secondaryOptions={secondaryOptions}
+          secondarySelected={activeAddress[1]}
+          handleClickPrimary={val => setActiveAddress([val, 0])}
+          handleClickSecondary={val => setActiveAddress([activeAddress[0], val])}
+          handleSetAttribute={handleSetAttribute}
+        />
       </header>
       <div id="loader-container">
         <div className="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
@@ -353,15 +355,35 @@ const AccordionTemplate2 = ({
               Learn more
               </a>
           </div>
+          <div style={{position:'absolute'}} className='zoom-wrapper'>
+             <button style={{borderRadius:'5px',fontSize:'larger',border:'0', backgroundColor: "#FFF"}} onClick={() => zoomAndControllers(2)}><PlusOutlined style={{borderRadius:'5px'}}/></button><br></br>
+             <button style={{borderRadius:'5px',fontSize:'larger',border:'0', backgroundColor: "#FFF"}} onClick={() => zoomAndControllers(-2)}><MinusOutlined style={{borderRadius:'5px'}}/></button>
+          </div>
         </PlayerWrapper>
         
         {window.threekitApi? 
-        <div>
-          <div style={{left:'0',position:'absolute',bottom:'15px',float:'left'}} className='zoom-wrapper'>
-             <button style={{borderRadius:'5px',fontSize:'larger',border:'0'}} onClick={() => zoomAndControllers(2)}><PlusOutlined style={{borderRadius:'5px'}}/></button><br></br>
-             <button style={{borderRadius:'5px',fontSize:'larger',border:'0'}} onClick={() => zoomAndControllers(-2)}><MinusOutlined style={{borderRadius:'5px'}}/></button>
-          </div>
-        <div className='template-wrapper regular-wapper' style={{ width: 'none' }}>
+        <div className='container' style={{width: "48vw"}}>
+          <SecondaryBar className='secondary-bar-wrapper col-padding' show={secondaryOptions && secondaryOptions.length}>
+          {secondaryOptions.map((label, i) => (
+          <SecondaryBarItem
+            id={label.toLowerCase().split(' ').join('-') + "-" + activeAddress[0]}
+            className='secondary-bar-item'
+            key={i}
+            onClick={e => {
+              e.stopPropagation();
+              setActiveAddress([activeAddress[0], i]);
+              localStorage.setItem('clickOnPrimary', 'false');
+              localStorage.setItem('menuSelected', label.toLowerCase().split(' ').join('-') + "-" + activeAddress[0]);
+            }}
+            selected={activeAddress[1] === i}
+          >
+            {label}
+          </SecondaryBarItem>
+          
+        ))}
+        </SecondaryBar>
+          
+        <div className='template-wrapper regular-wapper' style={{ width: '48vw' }}>
           {/*{controller?.[activeAddress[0]] && (
             <Title className="template-title">
               {controller[activeAddress[0]].label}
@@ -381,7 +403,7 @@ const AccordionTemplate2 = ({
             handleSetAttribute={handleSetAttribute}
           />
         </div>
-        <div className='template-wrapper summary-wrapper'>
+        <div className='template-wrapper summary-wrapper' style={{ width: '45vw' }}>
           {controller?.[activeAddress[0]]?.sections?.[activeAddress[1]] && (
             <Subtitle className="template-subtitle">
               {controller[activeAddress[0]]?.sections?.[activeAddress[1]].label}
@@ -419,7 +441,7 @@ const AccordionTemplate2 = ({
           </div>
 
           <div className='submit-wrapper'>
-          <div style={{color:'red',marginLeft:'12rem'}}>*Swipe down and submit your request</div>
+          <div style={{color:'red',textAlign:'center'}}>*Swipe down and submit your request</div>
             <div className='group'>
               <form onSubmit={handleSubmit(onSubmit)}>
                 <div className='group-header'>User Information</div>

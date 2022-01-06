@@ -50,10 +50,10 @@ const Accordion2 = ({ sections, configuration, handleSetAttribute }) => {
         ) => (
             <Wrapper key={i} selected={ selectedSection === i} >
               <div id={cssClass && cssClass} className='section-wrapper'>
-                <div className={'section-label'}><b>{label}</b></div>
+                <div style={{marginLeft:"5%"}} className={'section-label col-padding'}><b>{label}</b></div>
                 <div>{heading}</div>
                 <div>{description}</div>
-                <div>
+                <div style={{marginLeft:"5%"}} className="col-padding"> 
                     {Component ? (
                       <Component />
                     ) : inputs && inputs.length > 0 ? (

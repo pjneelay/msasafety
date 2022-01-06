@@ -4,7 +4,6 @@ import {
   Wrapper,
   PrimaryBar,
   PrimaryBarItem,
-  SecondaryBar,
   SecondaryBarItem,
 } from './menuBar.styles';
 
@@ -44,25 +43,7 @@ const MenuBar = ({
           </PrimaryBarItem>
         ))}
       </PrimaryBar>
-      <SecondaryBar className='secondary-bar-wrapper' show={secondaryOptions && secondaryOptions.length}>
-        {secondaryOptions.map((label, i) => (
-          <SecondaryBarItem
-            id={label.toLowerCase().split(' ').join('-') + "-" + primarySelected}
-            className='secondary-bar-item'
-            key={i}
-            onClick={e => {
-              e.stopPropagation();
-              handleClickSecondary(i);
-              localStorage.setItem('clickOnPrimary', 'false');
-              localStorage.setItem('menuSelected', label.toLowerCase().split(' ').join('-') + "-" + primarySelected);
-            }}
-            selected={secondarySelected === i}
-          >
-            {label}
-          </SecondaryBarItem>
-          
-        ))}
-      </SecondaryBar>
+      
     </Wrapper>
   );
 };
