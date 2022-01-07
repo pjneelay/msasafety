@@ -74,8 +74,8 @@ button, a, h1, h2, h3 {
     border-bottom: none;
 }
 #root .player-container.summary .zoom-wrapper {
-    margin-top: 5vw !important;
-    margin-left: 41%;
+    margin-top: -9vw !important;
+    left:87%;
 }
 
 #root .player-container.summary .container{
@@ -228,7 +228,7 @@ button, a, h1, h2, h3 {
 }
 
 #root .summary > div {
-    margin: auto;
+    /*margin: auto;*/
 }
 
 #root .summary .summary-wrapper .template-subtitle {
@@ -514,17 +514,17 @@ footer{
     #root .template-wrapper .next-btn{
         margin-top:30px
     }
-    #root .container{
+    /*#root .container{
         position:absolute;
         margin-top: 590px !important;
-       }
+       }*/
 }
 
 @media screen and (max-width: 736px) {
-    #root .container{
+  /*  #root .container{
         position:absolute !important;
         margin-top: 590px !important;
-       }
+       }*/
 
     #root .fCIvsh {
         margin:0;
@@ -582,6 +582,8 @@ footer{
 
     #root .zoom-wrapper{
       /*  bottom:156px !important;*/
+      top:10%;
+      left:80%;
     }
     #root .head1{
         margin-top: 17.5rem !important;
