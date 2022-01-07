@@ -513,10 +513,18 @@ footer{
     #root .template-wrapper .next-btn{
         margin-top:30px
     }
-    
+    #root .container{
+        position:absolute;
+        margin-top: 590px !important;
+       }
 }
 
 @media screen and (max-width: 736px) {
+    #root .container{
+        position:absolute !important;
+        margin-top: 590px !important;
+       }
+
     #root .fCIvsh {
         margin:0;
         grid-template-columns: none;
@@ -526,6 +534,7 @@ footer{
     #root .regular-wapper {
       overflow-y: unset;
       margin-top: 0rem;
+      width:90vw !important;
     }
 
     #root .player-container:not(.summary){
@@ -561,10 +570,13 @@ footer{
     #root .secondary-bar-wrapper{
         font-size: 11px !important;
         padding-left: 5px;
+        width:90vw;
     }
 
     #root .summary .summary-wrapper{
         overflow-y: unset;
+        width:90vw !important;
+        padding-left: 15px;;
     }
 
     #root .zoom-wrapper{
@@ -636,7 +648,7 @@ footer{
     #root .secondary-bar-wrapper {
         display: flex;
         flex-wrap: wrap;
-        
+        width:90vw;
         flex-direction: column;
     }
     #root .three-d-player-space {
