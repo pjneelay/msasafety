@@ -75,6 +75,7 @@ button, a, h1, h2, h3 {
 }
 #root .player-container.summary .zoom-wrapper {
     margin-top: 5vw !important;
+    margin-left: 41%;
 }
 
 #root .player-container.summary .container{
@@ -434,8 +435,8 @@ button, a, h1, h2, h3 {
     background: black;
 }
 .three-d-player-space .zoom-wrapper{
-    left: 5%;
-    top: 75%;
+    left: 46%;
+    top: 0%;
     width: 600px; 
     height: 0;
     max-width: 0; 
