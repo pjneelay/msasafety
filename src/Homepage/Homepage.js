@@ -36,7 +36,7 @@ const Homepage = () => {
                         <Link to="/">
                             <img  src={pant}/>
                             <div>
-                                <h2 className="head3" style={{marginLeft:'53rem'}}>GX3 PANT</h2>
+                                <h2 className="head3" style={{marginLeft:'53rem'}}>GPS PANT</h2>
                             </div>
                         </Link>
                     </div>

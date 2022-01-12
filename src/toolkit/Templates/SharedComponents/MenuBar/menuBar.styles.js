@@ -66,7 +66,7 @@ export const SecondaryBarItem = styled.div`
   transform: translateY(-50%);
   text-transform: uppercase;
   
-  color: ${props => (props.selected ? 'white' : 'grey')};
+  color: ${props => (props.selected ? 'white' : '#00A94E')};
   background-color: ${props => (props.selected ? 'grey' : 'white')};
   border-color: ${props => (props.selected ? 'green' : 'white')};
   cursor: ${props => (props.disabled ? 'default' : 'pointer')};

@@ -436,7 +436,7 @@ button, a, h1, h2, h3 {
 }
 .three-d-player-space .zoom-wrapper{
     left: 46%;
-    top: 0%;
+    top: -3%;
     width: 600px; 
     height: 0;
     max-width: 0; 
@@ -494,16 +494,18 @@ footer{
 }
 #root .secondary-bar-wrapper{
     justify-content: inherit;
-    flex-wrap: wrap;
+    /*flex-wrap: wrap;*/
     border-bottom: 1px solid #d3d4d3;
     height: max-content;
     padding: 50px 0 5px 4%;
+    overflow-x: hidden;
 }
 #root .secondary-bar-wrapper .secondary-bar-item{
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 0 2% 5%;
+    padding:20px;
 }
 
 /* On screens that are 600px or less, set the background color to olive */
@@ -514,18 +516,19 @@ footer{
     #root .template-wrapper .next-btn{
         margin-top:30px
     }
-    /*#root .container{
-        position:absolute;
-        margin-top: 590px !important;
-       }*/
+    
+    #root .buttonBar{
+        display:none;
+    }
+     
 }
 
 @media screen and (max-width: 736px) {
-  /*  #root .container{
-        position:absolute !important;
-        margin-top: 590px !important;
-       }*/
-
+  
+    #root .buttonBar{
+        display:none;
+    }
+     
     #root .fCIvsh {
         margin:0;
         grid-template-columns: none;

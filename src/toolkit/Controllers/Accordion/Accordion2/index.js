@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Wrapper } from './accordion2.styles';
-import { PlusOutlined, MinusOutlined,RightCircleOutlined,CaretDownFilled,CaretUpFilled } from '@ant-design/icons';
+import { ArrowRightOutlined } from '@ant-design/icons';
 import InputComponents from '../../../InputComponents';
 import Navigations from '../../../../config/navigation';
 
@@ -74,7 +74,7 @@ const Accordion2 = ({ sections, configuration, handleSetAttribute }) => {
             </Wrapper>
           )
       )}
-      <div className='next-btn' onClick={() => handleClickNext()}><b>Next <RightCircleOutlined /></b></div>
+      <div className='next-btn' onClick={() => handleClickNext()}><b>Next <ArrowRightOutlined /></b></div>
     </>
   );
 };

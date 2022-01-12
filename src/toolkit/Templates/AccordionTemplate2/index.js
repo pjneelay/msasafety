@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState,useRef } from 'react';
 import { Accordion2 as Accordion } from '../../Controllers';
 import Player from '../SharedComponents/Player';
 import MenuBar from '../SharedComponents/MenuBar';
+import { LeftOutlined ,RightOutlined} from '@ant-design/icons';
 import {
   Wrapper,
   PlayerWrapper,
@@ -63,7 +64,7 @@ const AccordionTemplate2 = ({
     (await pdfService(data, snapshotModel, gearSelected) === true) ? openModal(true) : openModal(false);
 
   }
-
+  const ref = useRef(null);
 
   let newConfiguration = [];
   let lettering = [];
@@ -325,7 +326,10 @@ const AccordionTemplate2 = ({
    
     window.threekitApi.api.camera.zoom(zoomlevel);
   }
-
+  
+  const scroll = (scrollOffset) => {
+    ref.current.scrollLeft += scrollOffset;
+  };
   return (
     <div id="mainContainer" className="container">
       <header>
@@ -356,15 +360,20 @@ const AccordionTemplate2 = ({
               </a>
           </div>
           <div style={{position:'absolute'}} className='zoom-wrapper'>
-             <button style={{borderRadius:'5px',fontSize:'larger',border:'0', backgroundColor: "#FFF"}} onClick={() => zoomAndControllers(2)}><PlusOutlined style={{borderRadius:'5px'}}/></button><br></br>
-             <button style={{borderRadius:'5px',fontSize:'larger',border:'0', backgroundColor: "#FFF"}} onClick={() => zoomAndControllers(-2)}><MinusOutlined style={{borderRadius:'5px'}}/></button>
-          </div>
+             <button style={{borderRadius:'5px',border:'0', backgroundColor: "#FFF",marginBottom:'3px'}} onClick={() => zoomAndControllers(-2)}><MinusOutlined style={{borderRadius:'5px',fontSize: '22px', color: 'grey',padding:'5px'}}/></button>
+         
+             <button style={{borderRadius:'5px',border:'0', backgroundColor: "#FFF"}} onClick={() => zoomAndControllers(2)}><PlusOutlined style={{borderRadius:'5px',fontSize: '22px', color: 'grey',padding:'5px'}}/></button><br></br>
+        </div>
         </PlayerWrapper>
         
         {window.threekitApi? 
         <div className='container' style={{width: "48vw"}}>
-          <SecondaryBar className='secondary-bar-wrapper col-padding' show={secondaryOptions && secondaryOptions.length}>
+           {(secondaryOptions.length >3)? <div className='buttonBar'><button className='leftButton' onClick={() => scroll(-30)} style={{overflowX:'unset',position:'fixed',zIndex:'2000',marginTop:'2rem',borderRadius:'50%',borderColor:'white'}}><LeftOutlined style={{ fontSize: '16px', color: 'green' }} /></button><div style={{display:'flex',justifyContent:'flex-end'}}><button className='rightButton' onClick={() => scroll(30)} style={{overflowX:'unset',position:'fixed',zIndex:'2000',marginTop:'2rem',borderRadius:'50%',borderColor:'white'}}><RightOutlined style={{ fontSize: '16px', color: 'green' }} /></button></div></div> :null }
+         
+          <SecondaryBar className='secondary-bar-wrapper col-padding' show={secondaryOptions && secondaryOptions.length} ref={ref}>
+        
           {secondaryOptions.map((label, i) => (
+            
           <SecondaryBarItem
             id={label.toLowerCase().split(' ').join('-') + "-" + activeAddress[0]}
             className='secondary-bar-item'
@@ -379,11 +388,14 @@ const AccordionTemplate2 = ({
           >
             {label}
           </SecondaryBarItem>
-          
+         
         ))}
+     
         </SecondaryBar>
-          
-        <div className='template-wrapper regular-wapper' style={{ width: '48vw' }}>
+        {/*(secondaryOptions.length >3)?    <span><button onClick={() => scroll(30)} style={{marginLeft:'50rem',marginTop:'-5rem',borderRadius:'50%',borderColor:'white'}}><RightOutlined /></button></span>
+        :null */}
+         
+      <div className='template-wrapper regular-wapper' style={{ width: '48vw' }}>
           {/*{controller?.[activeAddress[0]] && (
             <Title className="template-title">
               {controller[activeAddress[0]].label}
