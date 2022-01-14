@@ -1,3 +1,7 @@
+html, #body, #root{
+    height: max-content;
+}
+
 #root{
     width: 100%;
 }
@@ -217,8 +221,15 @@ button, a, h1, h2, h3 {
     display: block;
     position: relative;
     overflow-y: auto;
-    
-    height:600px;
+    height: calc(100vh - 180px);
+    margin-bottom: 35px;
+}
+.holder___3ugrT, .threekit .player___25Zg2, .threekit .canvas___BrMgq, .layerContainer___8IxRY, .layersLoader___1IKGJ{
+    height: 100%;
+}
+.dd--span__breadcrum{
+    font-size: 25px;
+    margin: 0 10px;
 }
 #root .regular-wapper{
     height:calc(100vh - 240px);
@@ -262,8 +273,10 @@ button, a, h1, h2, h3 {
     display: grid;
     display: flex;
     grid-template-columns: auto max-content;
-    grid-gap: 30px;
+    grid-gap: 8px;
     padding: 4px 20px;
+    border-bottom: 1px solid #858990;
+    flex-wrap: wrap;
 }
 
 #root .content-email {
@@ -367,19 +380,33 @@ button, a, h1, h2, h3 {
 
 #root .configuration-table{
     width: 100%;
+    box-sizing: border-box;
+    border-top: 1px solid #CCCDCD;
+    border-left: 1px solid #CCCDCD;
+    border-right: 1px solid #CCCDCD;
 }
 
 #root .configuration-table-tr{
     width: 100%;
 }
-
-#root .configuration-table-optionNumber{
-    width: 25%;
+dd{
+    display: flex;
+    align-items: center;
+    font-size: 1.2em;
 }
-
-#root .configuration-table-optionGroup{
+/* #root .configuration-table-optionNumber{
     width: 25%;
+} */
+#root .configuration-table-attribute{
+    align-self: center;
+    font-weight: 700;
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+    margin-left: 0;
 }
+/* #root .configuration-table-optionGroup{
+    width: 25%;
+} */
 
 #root .configuration-table-optionDescription{
     width: 50%;
@@ -484,6 +511,9 @@ footer{
     color: white;
     height: 50px;
     padding-top: 14px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
 
 .header-gear{
@@ -494,8 +524,9 @@ footer{
 }
 #root .secondary-bar-wrapper{
     justify-content: inherit;
-    /*flex-wrap: wrap;*/
-    border-bottom: 1px solid #d3d4d3;
+  /*  flex-wrap: wrap;*/
+    box-sizing: border-box;
+    border-bottom: 1px solid #CCCDCD;
     height: max-content;
     padding: 50px 0 5px 4%;
     overflow-x: hidden;
@@ -795,3 +826,6 @@ footer{
 .none-visible{
     display: none;
 }
+#root .summary .summary--padding{
+    padding: 20px 35px;
+  }

@@ -1,4 +1,4 @@
-import React, { useState,useRef } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { Accordion2 as Accordion } from '../../Controllers';
 import Player from '../SharedComponents/Player';
 import MenuBar from '../SharedComponents/MenuBar';
@@ -23,6 +23,8 @@ import {
   MinusOutlined,
 } from '@ant-design/icons';
 import { SecondaryBar, SecondaryBarItem } from '../SharedComponents/MenuBar/menuBar.styles';
+import { AppContext } from '../../../provider/provider';
+import { json } from 'body-parser';
 
 const AccordionTemplate2 = ({
   title,
@@ -31,9 +33,12 @@ const AccordionTemplate2 = ({
   configuration,
   handleSetAttribute,
 }) => {
+
   const [activeAddress, setActiveAddress] = useState([0, 0]);
   const [modalIsOpen, setIsOpen] = useState(false);
   const [modalMessage, setModalMessage] = useState('');
+  let gearArray = {"athletix": 'groupNotAdded', "Jacket": "groupNotAdded", "Pants": "groupNotAdded"};
+
 
   const customStyles = {
     content: {
@@ -86,6 +91,17 @@ const AccordionTemplate2 = ({
   let gearTitle = '';
   let existSections = [];
 
+  useEffect(() => {
+    let groupsDom = document.querySelectorAll(".group");
+  
+    for (let a = 0; a < groupsDom.length; a++){
+      
+      if(a !== 0 && a !== 1 && a !== 5 && a!==39){
+        groupsDom[a].style.display = "none";
+      }
+      groupsDom[a].style.marginBottom = a == 5 ? "20px" : 0;
+    }
+  })
   if (configuration !== null) {
     for (var key in configuration) {
       group = '';
@@ -99,8 +115,10 @@ const AccordionTemplate2 = ({
       }
 
       if (configuration[key] !== '') {
+
         for (var keyInput in inputs) {
           if (inputs[keyInput].attribute === key && !key.includes('Row')) {
+
             group = inputs[keyInput].optionGroup[configuration[key]];
             number = inputs[keyInput].optionNumber[configuration[key]];
             type = inputs[keyInput].optionType[configuration[key]];
@@ -109,25 +127,25 @@ const AccordionTemplate2 = ({
         }
         if (configuration[key].assetId !== undefined && configuration[key].assetId !== '' && !key.includes('Row') && !key.includes('Patch Lettering') && (gearSelected === gear || gear === 'athletix')) {
           newConfiguration.push({
-            optionNumber: number,
-            optionGroup: group,
+            optionNumber: number ? number : inputs[keyInput].optionNumber[gear] ? inputs[keyInput].optionNumber[gear] : "",
+            optionGroup: group ? group :  inputs[keyInput].optionGroup[gear] ? inputs[keyInput].optionGroup[gear] : "",
             optionDescription: configuration[key].assetId,
             optionType: type,
             attribute: key,
             sortValue: sortGroup[group],
-            gear: gear,
+            gear: gear ? gear : inputs[keyInput].gear ? inputs[keyInput].gear : "",
             sortByGear: sortByGearGroup[gear]
           })
 
         } else if (configuration[key].assetId === undefined && !key.includes('Row') && !key.includes('Patch Lettering') && configuration[key] !== "None" && configuration[key] !== "NONE" && (gearSelected === gear || gear === 'athletix' || gearSelected === 'Athletix')) {
           newConfiguration.push({
-            optionNumber: number,
-            optionGroup: group,
+            optionNumber: number ? number : inputs[keyInput].optionNumber[gear] ? inputs[keyInput].optionNumber[gear] : "",
+            optionGroup: group ? group :  inputs[keyInput].optionGroup[gear] ? inputs[keyInput].optionGroup[gear] : "",
             optionDescription: configuration[key],
             optionType: type,
             attribute: key,
             sortValue: sortGroup[group],
-            gear: gear,
+            gear: gear ? gear : inputs[keyInput].gear ? inputs[keyInput].gear : "",
             sortByGear: sortByGearGroup[gear]
           })
         }
@@ -251,7 +269,6 @@ const AccordionTemplate2 = ({
   letteringConfiguration.sort(((a, b) => a.sortValue - b.sortValue));
   let secondaryOptions;
   // newConfiguration.sort(((a, b) => a.gear - b.gear));
-  console.log('newConfiguration: ', newConfiguration);
 
   if (controller?.[activeAddress[0]]?.sections) {
     secondaryOptions = controller[activeAddress[0]].sections.map(
@@ -270,17 +287,19 @@ const AccordionTemplate2 = ({
     html = [];
     if (itemGroup !== null && ifExistSection(itemGroup,gearTitle) === false) {
       for (var i = 0; i < newConfiguration.length; i++) {
-        if (newConfiguration[i].optionGroup === itemGroup && newConfiguration[i].gear === gearTitle) {
-          html.push(<tr key={i} className='group-content-row configuration-table-tr'>
-            <td className='configuration-table-optionNumber'>{newConfiguration[i].optionNumber}</td>
-            <td className='configuration-table-optionGroup'>{newConfiguration[i].optionGroup}</td>
-            <td className='configuration-table-optionDescription'>{newConfiguration[i].optionDescription}</td>
-          </tr>)
+        if (newConfiguration[i].gear === gearTitle && gearArray[gearTitle] == "groupNotAdded") {
+          html.push(<div key={i} className='group-content-row configuration-table-div'>
+            <dt className='configuration-table-attribute'>{newConfiguration[i].attribute}: </dt>
+            <dd className='configuration-table-optionNumber'>{newConfiguration[i].optionNumber}</dd>
+            <dd className='configuration-table-optionGroup'>{newConfiguration[i].optionGroup ? <span className='dd--span__breadcrum'>|</span> : ""}{newConfiguration[i].optionGroup}</dd>
+            <dd className='configuration-table-optionDescription'>{newConfiguration[i].optionDescription? <span className='dd--span__breadcrum'>|</span> : ""}{newConfiguration[i].optionDescription}</dd>
+          </div>)
         }
         existSections.push({ group: itemGroup, gear: gearTitle });
         groupTitle = itemGroup;
       }
     };
+    gearArray[gearTitle] = "groupAdded";
   }
 
   const ifExistSection = (group, gear) => {
@@ -294,7 +313,7 @@ const AccordionTemplate2 = ({
 
   const gearHeader = (item) => {
     gear = '';
-    if (item !== null) {
+    if (item !== null && gearArray[item.gear] == "groupNotAdded") {
       if (gearTitle === '') {
         gear = item.gear;
       } else if (item.gear !== gearTitle) {
@@ -309,6 +328,7 @@ const AccordionTemplate2 = ({
     str = str.toLowerCase().replace(/(^([a-zA-Z\p{M}]))|([ -][a-zA-Z\p{M}])/g, function (replace_latter) {
       return replace_latter.toUpperCase();
     });  //Can use also /\b[a-z]/g
+
     return str;  //First letter capital in each word
   }
 
@@ -326,6 +346,7 @@ const AccordionTemplate2 = ({
    
     window.threekitApi.api.camera.zoom(zoomlevel);
   }
+ const currentYear = new Date;
   
   const scroll = (scrollOffset) => {
     ref.current.scrollLeft += scrollOffset;
@@ -416,19 +437,19 @@ const AccordionTemplate2 = ({
           />
         </div>
         <div className='template-wrapper summary-wrapper' style={{ width: '45vw' }}>
-          {controller?.[activeAddress[0]]?.sections?.[activeAddress[1]] && (
+          {/* {controller?.[activeAddress[0]]?.sections?.[activeAddress[1]] && (
             <Subtitle className="template-subtitle">
               {controller[activeAddress[0]]?.sections?.[activeAddress[1]].label}
             </Subtitle>
-          )}
+          )} */}
           
           <div className='configuration-wrapper'>
-          <div style={{color:'red',textAlign:'center'}}>*Swipe down and save your design</div>
+          <div className="summary--padding" style={{color:'red'}}>*<span style={{color: "#57585A"}}>Swipe down and save your design</span></div>
             {newConfiguration.map((item, index) => (
-              <div key={index} className='group'>
-                {groupTitle !== item.optionGroup ? <div className='header-gear'>{gearHeader(item)}</div> : null}
-                {groupTitle !== item.optionGroup && ifExistSection(item.optionGroup,gearTitle) === false ? <div className='group-header'>{item.optionGroup}</div> : null}
-                {groupTitle !== item.optionGroup ? <div className='group-content'> <table className='configuration-table'><tbody>{configurationSection(item.optionGroup)}{html.map((item, index) => (item))}</tbody></table> </div> : null}
+              <div key={item + index} className='group'>
+                {groupTitle !== item.optionGroup ? <div className='header-gear summary--padding'>{gearHeader(item)}</div> : null}
+                {/* {groupTitle !== item.optionGroup && ifExistSection(item.optionGroup,gearTitle) === false ? <div className='group-header'>{item.optionGroup}</div> : null} */}
+                {groupTitle !== item.optionGroup ? <div className='group-content'> <dl className='configuration-table'>{configurationSection(item.optionGroup)}{html.map((item, index) => (item))}</dl> </div> : null}
               </div>
             ))}
           </div>
@@ -453,7 +474,7 @@ const AccordionTemplate2 = ({
           </div>
 
           <div className='submit-wrapper'>
-          <div style={{color:'red',textAlign:'center'}}>*Swipe down and submit your request</div>
+          <div className="summary--padding" style={{color:'red'}}>*<span style={{color: "#57585A"}}>Swipe down and submit your request</span></div>
             <div className='group'>
               <form onSubmit={handleSubmit(onSubmit)}>
                 <div className='group-header'>User Information</div>
@@ -594,7 +615,7 @@ const AccordionTemplate2 = ({
       </Wrapper>
       <div></div>
       <footer>
-        <p>© 2020  Globe Holding Company, LLC . All rights reserved. | <a href="https://globe.msasafety.com/configurator/support">Support</a></p>
+        <p>{`© ${currentYear.getFullYear()}  Globe Holding Company, LLC . All rights reserved. |`}<a href="https://globe.msasafety.com/configurator/support">Support</a></p>
       </footer>
     </div>
   );

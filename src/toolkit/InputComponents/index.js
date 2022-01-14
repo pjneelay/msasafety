@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext} from 'react';
 
 import {
   Wrapper,
@@ -20,6 +20,8 @@ import RadioButtonsImages from './RadioButtonsImages';
 import Dropdown from './Dropdown';
 import Slider from './Slider';
 import PriceQuantityInput from './PriceQuantityInput';
+import {AppContext} from "../../provider/provider"
+
 
 export {
   ColorSelector1,
@@ -59,6 +61,7 @@ export default ({
   onChange,
   cssClass,
 }) => {
+  const {state, setState} = useContext(AppContext);
   switch (type) {
     case 'color':
     case 'color-1':
