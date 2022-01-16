@@ -380,16 +380,18 @@ const AccordionTemplate2 = ({
               Learn more
               </a>
           </div>
+          {window.threekitApi? 
           <div style={{position:'absolute'}} className='zoom-wrapper'>
              <button style={{borderRadius:'5px',border:'0', backgroundColor: "#FFF",marginBottom:'3px'}} onClick={() => zoomAndControllers(-2)}><MinusOutlined style={{borderRadius:'5px',fontSize: '22px', color: 'grey',padding:'5px'}}/></button>
          
              <button style={{borderRadius:'5px',border:'0', backgroundColor: "#FFF"}} onClick={() => zoomAndControllers(2)}><PlusOutlined style={{borderRadius:'5px',fontSize: '22px', color: 'grey',padding:'5px'}}/></button><br></br>
         </div>
+        :  null  }
         </PlayerWrapper>
         
         {window.threekitApi? 
         <div className='container' style={{width: "48vw"}}>
-           {(secondaryOptions.length >3)? <div className='buttonBar'><button className='leftButton' onClick={() => scroll(-30)} style={{overflowX:'unset',position:'fixed',zIndex:'2000',marginTop:'2rem',borderRadius:'50%',borderColor:'white'}}><LeftOutlined style={{ fontSize: '16px', color: 'green' }} /></button><div style={{display:'flex',justifyContent:'flex-end'}}><button className='rightButton' onClick={() => scroll(30)} style={{overflowX:'unset',position:'fixed',zIndex:'2000',marginTop:'2rem',borderRadius:'50%',borderColor:'white'}}><RightOutlined style={{ fontSize: '16px', color: 'green' }} /></button></div></div> :null }
+           {(secondaryOptions.length >3)? <div className='buttonBar'><button className='leftButton' onClick={() => scroll(-30)} style={{overflowX:'unset',position:'fixed',zIndex:'2000',marginTop:'2rem',borderRadius:'50%',borderColor:'white',backgroundColor:'white'}}><LeftOutlined style={{ fontSize: '16px', color: 'green' }} /></button><div style={{display:'flex',justifyContent:'flex-end'}}><button className='rightButton' onClick={() => scroll(30)} style={{overflowX:'unset',position:'fixed',zIndex:'2000',marginTop:'2rem',borderRadius:'50%',borderColor:'white',backgroundColor:'white'}}><RightOutlined style={{ fontSize: '16px', color: 'green' }} /></button></div></div> :null }
          
           <SecondaryBar className='secondary-bar-wrapper col-padding' show={secondaryOptions && secondaryOptions.length} ref={ref}>
         

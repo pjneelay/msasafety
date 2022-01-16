@@ -78,7 +78,7 @@ button, a, h1, h2, h3 {
     border-bottom: none;
 }
 #root .player-container.summary .zoom-wrapper {
-    margin-top: -9vw !important;
+    margin-top: 5vw !important;
     left:87%;
 }
 
