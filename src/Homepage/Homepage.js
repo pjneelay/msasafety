@@ -14,32 +14,40 @@ const Homepage = () => {
                     </div>
             </div>
             <div className='menu'>
+                   
+                    <div className='menuoption'>
+                        <Link to="/">
+                            <div style={{height:'30rem',backgroundColor:'white'}}>
+                                <img style={{padding:'37px'}} src={jacket}/>
+                            </div>
+                            
+                            <div>
+                                <h2 className="head2" style={{marginLeft:'9rem',marginTop:'-4rem'}}>GX3 COAT</h2>
+                            </div>
+                        </Link>
+                    </div>
+
+                    <div className='menuoption'>
+                        <Link to="/">
+                            <div style={{height:'30rem',backgroundColor:'white'}}>
+                                <img style={{padding:'61px'}} src={pant}/>
+                            </div>
+                            <div>
+                                <h2 className="head3" style={{marginLeft:'9rem',marginTop:'-4rem'}}>GPS PANT</h2>
+                            </div>
+                        </Link>
+                    </div>
+
                     <div className='menuoption'>
                         <Link to="/athletix">
-                            <img  src="https://source360-msa.azurewebsites.net/assets/athletix.png"/>
+                          <div style={{height:'30rem',backgroundColor:'white'}}>
+                            <img style={{padding:'13px',marginTop:'35px'}} src="https://source360-msa.azurewebsites.net/assets/athletix.png"/>
+                          </div>  
                             <div>
-                                <h2 className="head1" style={{marginLeft:'9rem'}}>ATHLETIX</h2>
+                                <h2 className="head1" style={{marginLeft:'9rem',marginTop:'-4rem'}}>ATHLETIX</h2>
                             </div>
                         </Link>
                      </div>
-
-                    <div className='menuoption'>
-                        <Link to="/">
-                            <img  src={jacket}/>
-                            <div>
-                                <h2 className="head2" style={{marginLeft:'30rem'}}>GX3 COAT</h2>
-                            </div>
-                        </Link>
-                    </div>
-
-                    <div className='menuoption'>
-                        <Link to="/">
-                            <img  src={pant}/>
-                            <div>
-                                <h2 className="head3" style={{marginLeft:'53rem'}}>GPS PANT</h2>
-                            </div>
-                        </Link>
-                    </div>
             </div>
       </div>
     );

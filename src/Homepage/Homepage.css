@@ -18,6 +18,8 @@
   
   .menuoption{
     position:relative;
+    margin-right: 25px;
+    box-shadow: 3px 2px 5px 0 grey;
   }
 
   .menuoption img:active {
@@ -27,11 +29,11 @@
   }
   .menuoption img{
     width:20rem;
-    height:30rem;
+    padding:26px;
     float:left;
     margin-left: 1rem;
     margin-right: 1rem;
-    box-shadow: 3px 2px 5px 0 lightgrey;
+   
   }
 
   .menuoption h2{
@@ -47,9 +49,12 @@
   }
 
   .menu{
+    display:flex;
+    justify-content: center;
     margin-top: 10rem;
-    margin-left: 25rem;
+    
   }
+
   .logo img {
     width: 100%;
     height: 100%;
