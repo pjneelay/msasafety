@@ -620,18 +620,18 @@ footer{
       left:80%;
     }
     #root .head1{
-        margin-top: 17.5rem !important;
+        margin-top: -3rem !important;
         margin-left:9rem !important;
         font-size: 17px !important;
     }
     #root .head2{
-        margin-top: 37rem !important;
+        margin-top: -3rem !important;
         margin-left:9rem !important;
         font-size: 17px !important;
     }
 
     #root .head3{
-        margin-top: 58rem !important;
+        margin-top: -3rem !important;
         margin-left:9rem !important;
         font-size: 17px !important;
     }
@@ -639,12 +639,18 @@ footer{
     #root .menu{
         margin-top: 0rem;
         margin-left: 1.5rem;
+        display: block !important;
+        
     }
 
     #root .menuoption img{
        height:20rem !important;
        padding-bottom: 1rem;
     }
+
+    #root .menuoption{
+        margin-bottom: 20px;
+     }
 
     #root .homepage{
         min-height: 100% !important;
@@ -674,10 +680,10 @@ footer{
        margin-left:5rem !important;
     }
     #root .head2{
-       margin-left:21rem !important;
+       margin-left:5rem !important;
     }
     #root .head3{
-       margin-left:38rem !important;
+       margin-left:5rem !important;
     }
     
 }
