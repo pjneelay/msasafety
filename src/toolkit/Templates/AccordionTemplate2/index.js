@@ -92,7 +92,7 @@ const AccordionTemplate2 = ({
   let existSections = [];
 
   useEffect(() => {
-    let groupsDom = document.querySelectorAll(".group");
+    let groupsDom = document.querySelectorAll(".configuration-wrapper .group");
   
     for (let a = 0; a < groupsDom.length; a++){
       
@@ -102,6 +102,7 @@ const AccordionTemplate2 = ({
       groupsDom[a].style.marginBottom = a == 5 ? "20px" : 0;
     }
   })
+  
   if (configuration !== null) {
     for (var key in configuration) {
       group = '';
@@ -394,8 +395,10 @@ const AccordionTemplate2 = ({
            {(secondaryOptions.length >3)? <div className='buttonBar'><button className='leftButton' onClick={() => scroll(-30)} style={{overflowX:'unset',position:'fixed',zIndex:'2000',marginTop:'2rem',borderRadius:'50%',borderColor:'white',backgroundColor:'white'}}><LeftOutlined style={{ fontSize: '16px', color: 'green' }} /></button><div style={{display:'flex',justifyContent:'flex-end'}}><button className='rightButton' onClick={() => scroll(30)} style={{overflowX:'unset',position:'fixed',zIndex:'2000',marginTop:'2rem',borderRadius:'50%',borderColor:'white',backgroundColor:'white'}}><RightOutlined style={{ fontSize: '16px', color: 'green' }} /></button></div></div> :null }
          
           <SecondaryBar className='secondary-bar-wrapper col-padding' show={secondaryOptions && secondaryOptions.length} ref={ref}>
-        
-          {secondaryOptions.map((label, i) => (
+          {secondaryOptions.map((label, i) => {  
+          console.log("config", label.toLowerCase().split(' ').join('-') + "-" + activeAddress[0])
+
+          return(
             
           <SecondaryBarItem
             id={label.toLowerCase().split(' ').join('-') + "-" + activeAddress[0]}
@@ -412,7 +415,7 @@ const AccordionTemplate2 = ({
             {label}
           </SecondaryBarItem>
          
-        ))}
+          )})}
      
         </SecondaryBar>
         {/*(secondaryOptions.length >3)?    <span><button onClick={() => scroll(30)} style={{marginLeft:'50rem',marginTop:'-5rem',borderRadius:'50%',borderColor:'white'}}><RightOutlined /></button></span>

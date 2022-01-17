@@ -21,8 +21,8 @@ const RadioButtonsImages = ({ options, value, onChange }) => {
   const THUMBNAIL_COLORMAP = {
     'Black': 'https://source360-msa.azurewebsites.net/assets/pbi-black.png',
     'Gold': 'https://source360-msa.azurewebsites.net/assets/pbi-gold.png',
-    'Lime/Yellow': LimeColor,
-    'Red/Orange': orangeColor
+    'Lime/Yellow': "https://source360-msa.azurewebsites.net/assets/lime_lettering.png",
+    'Red/Orange': "https://source360-msa.azurewebsites.net/assets/orange_lettering.png"
   };
 
 
