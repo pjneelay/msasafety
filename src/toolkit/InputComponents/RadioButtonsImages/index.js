@@ -22,7 +22,9 @@ const RadioButtonsImages = ({ options, value, onChange }) => {
     'Black': 'https://source360-msa.azurewebsites.net/assets/pbi-black.png',
     'Gold': 'https://source360-msa.azurewebsites.net/assets/pbi-gold.png',
     'Lime/Yellow': "https://source360-msa.azurewebsites.net/assets/lime_lettering.png",
-    'Red/Orange': "https://source360-msa.azurewebsites.net/assets/orange_lettering.png"
+    'Red/Orange': "https://source360-msa.azurewebsites.net/assets/orange_lettering.png",
+    'Yellow':"https://source360-msa.azurewebsites.net/assets/lime_lettering.png",
+    'Orange': "https://source360-msa.azurewebsites.net/assets/orange_lettering.png"
   };
 
 

@@ -172,7 +172,7 @@ export default {
   COAT_TRIM_COLOR: {
     label: 'Trim Color',
     attribute: 'COAT TRIM COLOR',
-    type: 'radioButtons',
+    type: 'RadioButtonsImages',
     data: 'tk-platform',
     cssClass: 'active',
     optionNumber: {
@@ -215,7 +215,7 @@ export default {
   PANTS_TRIM_COLOR: {
     label: 'Trim Color',
     attribute: 'PANTS TRIM COLOR',
-    type: 'radioButtons',
+    type: 'RadioButtonsImages',
     data: 'tk-platform',
     cssClass: 'active',
     optionNumber: {

@@ -44,7 +44,7 @@ export const ButtonWrapper = styled.div`
 
   & > div:nth-child(2) {
     width: 100px;
-    margin-left:1rem;
+    margin-left:0.5rem;
     padding-top: 8px;
     font-size: 15px;
 
