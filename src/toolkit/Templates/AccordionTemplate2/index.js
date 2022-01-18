@@ -395,10 +395,7 @@ const AccordionTemplate2 = ({
            {(secondaryOptions.length >3)? <div className='buttonBar'><div className='leftButton' onClick={() => scroll(-30)} style={{overflowX:'unset',position:'fixed',zIndex:'2000',marginTop:'2rem',borderRadius:'50%',borderColor:'white',backgroundColor:'white',padding:'8px',boxShadow:'0 10px 6px -6px grey'}}><LeftOutlined style={{ fontSize: '16px', color: ' #00A94E' }} /></div><div style={{display:'flex',justifyContent:'flex-end'}}><div className='rightButton' onClick={() => scroll(30)} style={{overflowX:'unset',position:'fixed',zIndex:'2000',marginTop:'2rem',borderRadius:'50%',borderColor:'white',backgroundColor:'white',padding:'8px',boxShadow:'0 10px 6px -6px grey'}}><RightOutlined style={{ fontSize: '16px', color: ' #00A94E' }} /></div></div></div> :null }
          
           <SecondaryBar className='secondary-bar-wrapper col-padding' show={secondaryOptions && secondaryOptions.length} ref={ref}>
-          {secondaryOptions.map((label, i) => {  
-          console.log("config", label.toLowerCase().split(' ').join('-') + "-" + activeAddress[0])
-
-          return(
+          {secondaryOptions.map((label, i) => (
             
           <SecondaryBarItem
             id={label.toLowerCase().split(' ').join('-') + "-" + activeAddress[0]}
@@ -415,7 +412,7 @@ const AccordionTemplate2 = ({
             {label}
           </SecondaryBarItem>
          
-          )})}
+          ))}
      
         </SecondaryBar>
         {/*(secondaryOptions.length >3)?    <span><button onClick={() => scroll(30)} style={{marginLeft:'50rem',marginTop:'-5rem',borderRadius:'50%',borderColor:'white'}}><RightOutlined /></button></span>

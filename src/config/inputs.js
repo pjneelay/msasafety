@@ -147,6 +147,91 @@ export default {
     gear: 'athletix'
   },
 
+  COAT_TRIM_TYPE: {
+    label: 'Trim Type',
+    attribute: 'COAT TRIM TYPE',
+    type: 'radioButtons',
+    data: 'tk-platform',
+    selected: true,
+    cssClass: 'active',
+    optionNumber: {
+      NFPAB: 'NA',
+      NYC: 'NA',
+    },
+    optionGroup: {
+      NFPAB: 'NA',
+      NYC: 'NA',
+    },
+    optionType: {
+      NFPAB: 'NFPAB',
+      NYC: 'NYC',
+    },
+    gear: 'athletix'
+  },
+
+  COAT_TRIM_COLOR: {
+    label: 'Trim Color',
+    attribute: 'COAT TRIM COLOR',
+    type: 'radioButtons',
+    data: 'tk-platform',
+    cssClass: 'active',
+    optionNumber: {
+      NFPAB: 'NA',
+      NYC: 'NA',
+    },
+    optionGroup: {
+      NFPAB: 'NA',
+      NYC: 'NA',
+    },
+    optionType: {
+      NFPAB: 'NFPAB',
+      NYC: 'NYC',
+    },
+    gear: 'athletix'
+  },
+
+  PANTS_TRIM_TYPE: {
+    label: 'Trim Color',
+    attribute: 'PANTS TRIM TYPE',
+    type: 'radioButtons',
+    data: 'tk-platform',
+    selected: true,
+    cssClass: 'active',
+    optionNumber: {
+      NFPAB: 'NA',
+      NYC: 'NA',
+    },
+    optionGroup: {
+      NFPAB: 'NA',
+      NYC: 'NA',
+    },
+    optionType: {
+      NFPAB: 'NFPAB',
+      NYC: 'NYC',
+    },
+    gear: 'athletix'
+  },
+
+  PANTS_TRIM_COLOR: {
+    label: 'Trim Color',
+    attribute: 'PANTS TRIM COLOR',
+    type: 'radioButtons',
+    data: 'tk-platform',
+    cssClass: 'active',
+    optionNumber: {
+      NFPAB: 'NA',
+      NYC: 'NA',
+    },
+    optionGroup: {
+      NFPAB: 'NA',
+      NYC: 'NA',
+    },
+    optionType: {
+      NFPAB: 'NFPAB',
+      NYC: 'NYC',
+    },
+    gear: 'athletix'
+  },
   /**************************************************
    *************** JACKET Options *****************
    **************************************************/

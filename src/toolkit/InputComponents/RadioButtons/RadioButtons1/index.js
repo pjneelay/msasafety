@@ -8,7 +8,8 @@ const RadioButtons1 = ({ options, value, onChange, disabled, cssClass }) => {
 
   return (
     <Wrapper className="inputs-container">
-      {options.map(({ selected, label, value: val }, i) => (
+      {options.map(({ selected, label, value: val }, i) => {
+        return(
         <ButtonWrapper
           key={i}
           onClick={() => onChange(val)}
@@ -18,7 +19,7 @@ const RadioButtons1 = ({ options, value, onChange, disabled, cssClass }) => {
         >
          <CheckCircleFilled/> {label}
         </ButtonWrapper>
-      ))}
+      )})}
     </Wrapper>
   );
 };

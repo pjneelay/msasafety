@@ -33,6 +33,7 @@ const Accordion2 = ({ sections, configuration, handleSetAttribute }) => {
   };
 
   if (!sections || sections.length === 0) return null;
+  console.log("sections", sections)
   return (
     <>
       {sections.map(

@@ -31,8 +31,12 @@ export default [
         label: 'Trim',
         sections: [
           {
-            label: 'TRIM',
-            inputs: ['trim_type', 'trim_color'],
+            label: 'COAT TRIM',
+            inputs: ['COAT_TRIM_TYPE', 'COAT_TRIM_COLOR'],
+          },
+          {
+            label: 'PANTS TRIM',
+            inputs: ['PANTS_TRIM_TYPE', 'PANTS_TRIM_COLOR'],
           },
         ]
       }
