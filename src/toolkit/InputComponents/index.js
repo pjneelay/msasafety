@@ -42,6 +42,9 @@ const DefaultInputContainer = ({ label, description, children }) => {
     <Wrapper className={`input-component ${label.split(' ').join('-').toLowerCase()}`}>
       {label.includes('Letters Size') && <Label className="input-label">LETTERS SIZE</Label>}
       {label.includes('Letters Color') && <Label className="input-label">LETTERS COLOR</Label>}
+      {label.includes('Trim Type') && <Label className="input-label">TRIM TYPE</Label>}
+      {label.includes('Trim Color') && <Label className="input-label">TRIM COLOR</Label>}
+      
       {description && (
         <Description className="input-description">{description}</Description>
       )}

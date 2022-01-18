@@ -52,7 +52,7 @@ export const ButtonWrapper = styled.div`
       props.disabled
         ? '0px 2px 5px 0px rgba(0,0,0,0.1)'
         : props.selected
-        ? `0px 7px 20px grey`
+        ? ``
         : `0px 3px 6px 2px rgba(0, 0, 0, 0.1)`};
     transform: ${props =>
       props.selected ? 'translateY(-4px)' : 'translateY(0px)'};

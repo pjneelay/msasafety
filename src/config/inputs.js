@@ -191,7 +191,7 @@ export default {
   },
 
   PANTS_TRIM_TYPE: {
-    label: 'Trim Color',
+    label: 'Trim Type',
     attribute: 'PANTS TRIM TYPE',
     type: 'radioButtons',
     data: 'tk-platform',
