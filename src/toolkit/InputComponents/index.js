@@ -42,9 +42,11 @@ const DefaultInputContainer = ({ label, description, children }) => {
     <Wrapper className={`input-component ${label.split(' ').join('-').toLowerCase()}`}>
       {label.includes('Letters Size') && <Label className="input-label">LETTERS SIZE</Label>}
       {label.includes('Letters Color') && <Label className="input-label">LETTERS COLOR</Label>}
-      {label.includes('Trim Type') && <Label className="input-label">TRIM TYPE</Label>}
-      {label.includes('Trim Color') && <Label className="input-label">TRIM COLOR</Label>}
+      {/*label.includes('Trim Type') && <Label className="input-label">TRIM TYPE</Label>*/}
+      {label.includes('Trim Color') && <Label className="input-label">Trim Color</Label>}
       
+      {label.includes('Color') || label.includes('GEAR') || label.includes('Thermal Liner') || label.includes('Moisture Barrier') || label.includes('Letters Text') || label.includes('B Letters Text') || label.includes('C Letters Text') || label.includes('E Letters Text') || label.includes('F Letters Text') || label.includes('Letters Size') || label.includes('B Letters Size') || label.includes('C Letters Size') || label.includes('E Letters Size') || label.includes('F Letters Size')? null :<Label className="input-label">{label}</Label>}
+     
       {description && (
         <Description className="input-description">{description}</Description>
       )}

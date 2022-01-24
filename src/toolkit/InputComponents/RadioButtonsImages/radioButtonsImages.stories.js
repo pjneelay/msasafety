@@ -10,7 +10,7 @@ const options = [
   },
   {
     label: 'green',
-    value: 'green',
+    value: '#00A94E',
     img: null,
   },
   {

@@ -77,8 +77,7 @@ export const ButtonGearWrapper = styled.div`
       height:7rem;
       border: 2px solid 
       ${props => (props.selected ? `#00A94E` : 'rgba(0, 0, 0, 0)')};
-    ${props =>
-      props.selected && 'box-shadow: -3px 3px 5px 6px rgba(100, 100, 100, 0.1);'}
+    
     ${props => props.selected && `color: grey;`}
     ${props =>
       props.selected && 'padding:4px'}
@@ -87,7 +86,8 @@ export const ButtonGearWrapper = styled.div`
 
   & > div:nth-child(2) {
     width: 100px;
-    margin-left:1rem;
+   display:flex;
+   justify-content:center;
     padding-top: 8px;
     font-size: 15px;
 

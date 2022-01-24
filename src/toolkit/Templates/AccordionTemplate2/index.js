@@ -381,18 +381,19 @@ const AccordionTemplate2 = ({
               Learn more
               </a>
           </div>
-          {window.threekitApi? 
-          <div style={{position:'absolute'}} className='zoom-wrapper'>
-             <button style={{borderRadius:'5px',border:'0', backgroundColor: "#FFF",marginBottom:'3px'}} onClick={() => zoomAndControllers(-2)}><MinusOutlined style={{borderRadius:'5px',fontSize: '22px', color: 'grey',padding:'5px'}}/></button>
+          {window.threekitApi?   
          
-             <button style={{borderRadius:'5px',border:'0', backgroundColor: "#FFF"}} onClick={() => zoomAndControllers(2)}><PlusOutlined style={{borderRadius:'5px',fontSize: '22px', color: 'grey',padding:'5px'}}/></button><br></br>
+          <div style={{position:'absolute'}} className='zoom-wrapper'>
+            <button style={{borderRadius:'5px',border:'0', backgroundColor: "#FFF",marginBottom:'3px'}} onClick={() => zoomAndControllers(2)}><PlusOutlined style={{borderRadius:'5px',fontSize: '22px', color: 'grey',padding:'5px 2px 5px 2px'}}/></button>
+         
+            <button style={{borderRadius:'5px',border:'0', backgroundColor: "#FFF"}} onClick={() => zoomAndControllers(-2)}><MinusOutlined style={{borderRadius:'5px',fontSize: '22px', color: 'grey',padding:'5px 2px 5px 2px'}}/></button><br></br>
         </div>
         :  null  }
         </PlayerWrapper>
         
         {window.threekitApi? 
-        <div className='container' style={{width: "48vw"}}>
-           {(secondaryOptions.length >3)? <div className='buttonBar'><div className='leftButton' onClick={() => scroll(-30)} style={{overflowX:'unset',position:'fixed',zIndex:'2000',marginTop:'2rem',borderRadius:'50%',borderColor:'white',backgroundColor:'white',padding:'8px',boxShadow:'0 10px 6px -6px grey'}}><LeftOutlined style={{ fontSize: '16px', color: ' #00A94E' }} /></div><div style={{display:'flex',justifyContent:'flex-end'}}><div className='rightButton' onClick={() => scroll(30)} style={{overflowX:'unset',position:'fixed',zIndex:'2000',marginTop:'2rem',borderRadius:'50%',borderColor:'white',backgroundColor:'white',padding:'8px',boxShadow:'0 10px 6px -6px grey'}}><RightOutlined style={{ fontSize: '16px', color: ' #00A94E' }} /></div></div></div> :null }
+        <div className='container' style={{width: "50vw"}}>
+           {(secondaryOptions.length >3)? <div className='buttonBar'><div className='leftButton' onClick={() => scroll(-30)} style={{overflowX:'unset',position:'fixed',zIndex:'2000',marginTop:'2rem',borderRadius:'50%',borderColor:'white',backgroundColor:'white',padding:'8px',boxShadow:'0 10px 6px -6px grey',width:'1.8%',height:'6%'}}><LeftOutlined style={{ fontSize: '16px', color: ' #00A94E' }} /></div><div style={{display:'flex',justifyContent:'flex-end'}}><div className='rightButton' onClick={() => scroll(30)} style={{overflowX:'unset',position:'fixed',zIndex:'2000',marginTop:'2rem',borderRadius:'50%',borderColor:'white',backgroundColor:'white',padding:'8px',boxShadow:'0 10px 6px -6px grey',width:'1.8%',height:'6%'}}><RightOutlined style={{ fontSize: '16px', color: ' #00A94E' }} /></div></div></div> :null }
          
           <SecondaryBar className='secondary-bar-wrapper col-padding' show={secondaryOptions && secondaryOptions.length} ref={ref}>
           {secondaryOptions.map((label, i) => (
@@ -418,7 +419,7 @@ const AccordionTemplate2 = ({
         {/*(secondaryOptions.length >3)?    <span><button onClick={() => scroll(30)} style={{marginLeft:'50rem',marginTop:'-5rem',borderRadius:'50%',borderColor:'white'}}><RightOutlined /></button></span>
         :null */}
          
-      <div className='template-wrapper regular-wapper' style={{ width: '48vw' }}>
+      <div className='template-wrapper regular-wapper' style={{ width: '45vw' }}>
           {/*{controller?.[activeAddress[0]] && (
             <Title className="template-title">
               {controller[activeAddress[0]].label}
@@ -476,7 +477,15 @@ const AccordionTemplate2 = ({
           </div>
 
           <div className='submit-wrapper'>
-          <div className="summary--padding" style={{color:'red'}}>*<span style={{color: "#57585A"}}>Swipe down and submit your request</span></div>
+          <div className="summary--padding" >
+            <span style={{color: "#57585A",display:'flex',justifyContent:'center'}}>Images displayed are for illustration purposes only. Actual product may vary.
+              <a href="https://globe.msasafety.com/configurator/support">Learn more</a> 
+            </span>
+            <br></br>
+            <h2 style={{color: "#57585A",display:'flex',justifyContent:'center',color:'#00A94E'}}>SHARE VIA EMAIL</h2>
+        
+            <span style={{color: "#57585A",display:'flex',justifyContent:'center'}}><span style={{color:'red'}}>*</span>Swipe down and submit your request</span>
+          </div>
             <div className='group'>
               <form onSubmit={handleSubmit(onSubmit)}>
                 <div className='group-header'>User Information</div>
@@ -617,7 +626,7 @@ const AccordionTemplate2 = ({
       </Wrapper>
       <div></div>
       <footer>
-        <p>{`© ${currentYear.getFullYear()}  Globe Holding Company, LLC . All rights reserved. |`}<a href="https://globe.msasafety.com/configurator/support">Support</a></p>
+        <p>{`© ${currentYear.getFullYear()}  Globe Holding Company, LLC . All rights reserved. |  `}<a className="link" href="https://globe.msasafety.com/configurator/support">Support</a></p>
       </footer>
     </div>
   );

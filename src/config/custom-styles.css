@@ -5,6 +5,29 @@ html, #body, #root{
 #root{
     width: 100%;
 }
+
+a:visited {
+    color:#00A94E;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  a:hover {
+    color:#00A94E;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  a:active {
+    color:#00A94E;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+
+#root .primary-bar-wrapper{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 5%;
+}
+
 #mainContainer{
     display: flex;
     flex-direction: column;
@@ -12,26 +35,26 @@ html, #body, #root{
     width: 100%;
 }
 div, a, span, label {
-    font-family: 'Titillium Web', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 button, a, h1, h2, h3 {
-    font-family: 'Titillium Web', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 /* latin-ext */
 @font-face {
-    font-family: 'Titillium Web';
+    font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
-    src: url(https://fonts.gstatic.com/s/titilliumweb/v9/NaPecZTIAOhVxoMyOr9n_E7fdM3mDaZRbryhsA.woff2) format('woff2');
+    src: url(https://fonts.googleapis.com/css2?family=Open+Sans&display=swap) format('woff2');
     unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
   }
   /* latin */
   @font-face {
-    font-family: 'Titillium Web';
+    font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
-    src: url(https://fonts.gstatic.com/s/titilliumweb/v9/NaPecZTIAOhVxoMyOr9n_E7fdMPmDaZRbrw.woff2) format('woff2');
+    src: url(https://fonts.googleapis.com/css2?family=Open+Sans&display=swap) format('woff2');
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
   }
 
@@ -103,7 +126,7 @@ button, a, h1, h2, h3 {
 #root .section-wrapper {
     height: auto;
     padding: 15px 0 0;
-    border-bottom: 1px solid #d3d4d3;
+  
 }
 
 #root .template-wrapper > div {
@@ -260,7 +283,7 @@ button, a, h1, h2, h3 {
 
 #root .summary.configuration .summary-wrapper .configuration-wrapper,
 #root .summary.lettering .summary-wrapper .lettering-wrapper,
-#root .summary.request .summary-wrapper .submit-wrapper {
+#root .summary.share .summary-wrapper .submit-wrapper {
     display: block;
 }
 
@@ -473,7 +496,6 @@ dd{
 .next-btn {
     padding: 10px 10px; 
     text-transform: uppercase;
-    margin: 10px 20px 10px 0 !important;
     font-size: 20px;
     -webkit-letter-spacing: 1px;
     -moz-letter-spacing: 1px;
@@ -485,7 +507,6 @@ dd{
     color:#858990;
     transform: translateY(-4px);
     display: inline-block;
-    min-width: 200px;
     text-align: center;
     cursor: pointer;
     border-radius: 5px;
@@ -499,10 +520,8 @@ header{
 }
 
 .header-logo{
-    margin-top: 0.5%;
     width: 166px;
-    margin-left: 5%;
-    height: 60px;
+    margin-left: 5%;  
 }
 
 footer{
@@ -528,7 +547,7 @@ footer{
     box-sizing: border-box;
     border-bottom: 1px solid #CCCDCD;
     height: max-content;
-    padding: 50px 0 5px 4%;
+    padding: 50px 0 0 4%;
     overflow-x: hidden;
 }
 #root .secondary-bar-wrapper .secondary-bar-item{
@@ -537,6 +556,8 @@ footer{
     align-items: center;
     margin: 0 0 2% 5%;
     padding:20px;
+    line-height: 1.25;
+    text-align: center;
 }
 
 /* On screens that are 600px or less, set the background color to olive */
@@ -833,5 +854,5 @@ footer{
     display: none;
 }
 #root .summary .summary--padding{
-    padding: 20px 35px;
+    padding: 10px 1px;
   }

@@ -9,10 +9,10 @@ export default [
             label: 'GEAR',
             inputs: ['GEAR_VISIBILITY'],
           },
-          {
+          /*{
             label: 'OUTER SHELL',
             inputs: ['outerShell'],
-          },
+          },*/
           {
             label: 'COLOR',
             inputs: ['color'],
@@ -330,7 +330,7 @@ export default [
         ]
       },
       {
-        label: 'REQUEST QUOTE',
+        label: 'SHARE VIA EMAIL',
         sections: [
           {
             //label: 'Chest',

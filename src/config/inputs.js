@@ -26,7 +26,7 @@ export default {
     gear: 'athletix'
   },
 
-  outerShell: {
+ /* outerShell: {
     label: 'Materials',
     attribute: 'OUTER SHELL',
     type: 'radioButtons',
@@ -42,7 +42,7 @@ export default {
       'PBI Stretch': 'NA',
     },
     gear: 'athletix'
-  },
+  },*/
 
   color: {
     label: 'Color',

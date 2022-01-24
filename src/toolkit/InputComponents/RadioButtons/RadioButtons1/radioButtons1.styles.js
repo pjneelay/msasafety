@@ -41,12 +41,12 @@ export const ButtonWrapper = styled.div`
     }
 
     background: ${props =>
-      props.disabled ? '#f5f5f5' : props.selected ? 'green' : 'white'};
+      props.disabled ? '#f5f5f5' : props.selected ? '#00A94E' : 'white'};
     color: ${props =>
       props.disabled ? 'rgba(0,0,0,.25)' : props.selected ? 'white' : 'grey'};
 
     border-color: ${props =>
-        props.disabled ? '#f5f5f5' : props.selected ? 'green' : 'white'};
+        props.disabled ? '#f5f5f5' : props.selected ? '#00A94E' : 'white'};
 
     box-shadow: ${props =>
       props.disabled

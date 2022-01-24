@@ -11,7 +11,7 @@ const colors = [
   },
   {
     label: 'green',
-    value: 'green',
+    value: '#00A94E',
     color: 'green',
   },
   {

@@ -68,12 +68,12 @@ export const SecondaryBarItem = styled.div`
   
   color: ${props => (props.selected ? 'white' : '#00A94E')};
   background-color: ${props => (props.selected ? 'grey' : 'white')};
-  border-color: ${props => (props.selected ? 'green' : 'white')};
+  border-color: ${props => (props.selected ? '#00A94E' : 'white')};
   cursor: ${props => (props.disabled ? 'default' : 'pointer')};
   opacity: ${props => (props.disabled ? 0.5 : 1)};
   border-radius: 5px;
   width:7rem;
-  font-size:14px;
+  font-size:16px;
   font-weight:200;
   font-weight:bold !important;
 `;
