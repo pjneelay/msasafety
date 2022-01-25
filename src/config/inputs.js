@@ -1540,13 +1540,13 @@ export default {
     type: 'radioButtons',
     data: 'tk-platform',
     optionNumber: {
-      'BLK ARASHIELD POCKET PULL TAB      ': 'N1STPTA1',
+      'BLK ARASHIELD POCKET PULL TAB': 'N1STPTA1',
     },
     optionGroup: {
-      'BLK ARASHIELD POCKET PULL TAB      ': 'PCKT',
+      'BLK ARASHIELD POCKET PULL TAB': 'PCKT',
     },
     optionType: {
-      'BLK ARASHIELD POCKET PULL TAB      ': 'OTHER',
+      'BLK ARASHIELD POCKET PULL TAB': 'OTHER',
     },
     gear: 'Pants'
   },
@@ -1780,20 +1780,20 @@ export default {
   },
 
   PANT_OTHER_GLOBEGUARD: {
-    label: '',
+    label: 'Pant Globeguard',
     attribute: 'PANT_OTHER_GLOBEGUARD',
     type: 'radioButtons',
     data: 'tk-platform',
     optionNumber: {
-      ' PANT GLOBEGUARD GMB     ': 'N200GGG',
+      ' PANT GLOBEGUARD GMB': 'N200GGG',
       ' PANT GLOBEGUARD NEOP': 'N200GGN'
     },
     optionGroup: {
-      ' PANT GLOBEGUARD GMB     ': 'MISCELLANEOUS',
+      ' PANT GLOBEGUARD GMB': 'MISCELLANEOUS',
       ' PANT GLOBEGUARD NEOP': 'MISCELLANEOUS'
     },
     optionType: {
-      ' PANT GLOBEGUARD GMB     ': 'OTHER',
+      ' PANT GLOBEGUARD GMB': 'OTHER',
       ' PANT GLOBEGUARD NEOP': 'OTHER'
     },
     gear: 'Pants'
