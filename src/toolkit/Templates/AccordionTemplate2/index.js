@@ -93,13 +93,13 @@ const AccordionTemplate2 = ({
 
   useEffect(() => {
     let groupsDom = document.querySelectorAll(".configuration-wrapper .group");
-  
+ 
     for (let a = 0; a < groupsDom.length; a++){
-      
-      if(a !== 0 && a !== 1 && a !== 5 && a!==39){
+      console.log(a,groupsDom[a]);
+      if(a !== 0 && a !== 9 && a !== 25 && a!==39){
         groupsDom[a].style.display = "none";
       }
-      groupsDom[a].style.marginBottom = a == 5 ? "20px" : 0;
+      groupsDom[a].style.marginBottom = a == 25 ? "20px" : 0;
     }
   })
   
@@ -288,11 +288,12 @@ const AccordionTemplate2 = ({
     html = [];
     if (itemGroup !== null && ifExistSection(itemGroup,gearTitle) === false) {
       for (var i = 0; i < newConfiguration.length; i++) {
+       
         if (newConfiguration[i].gear === gearTitle && gearArray[gearTitle] == "groupNotAdded") {
           html.push(<div key={i} className='group-content-row configuration-table-div'>
             <dt className='configuration-table-attribute'>{newConfiguration[i].attribute}: </dt>
             <dd className='configuration-table-optionNumber'>{newConfiguration[i].optionNumber}</dd>
-            <dd className='configuration-table-optionGroup'>{newConfiguration[i].optionGroup ? <span className='dd--span__breadcrum'>|</span> : ""}{newConfiguration[i].optionGroup}</dd>
+           {/* <dd className='configuration-table-optionGroup'>{newConfiguration[i].optionGroup ? <span className='dd--span__breadcrum'>|</span> : ""}{newConfiguration[i].optionGroup}</dd>*/}
             <dd className='configuration-table-optionDescription'>{newConfiguration[i].optionDescription? <span className='dd--span__breadcrum'>|</span> : ""}{newConfiguration[i].optionDescription}</dd>
           </div>)
         }
@@ -393,7 +394,7 @@ const AccordionTemplate2 = ({
         
         {window.threekitApi? 
         <div className='container' style={{width: "50vw"}}>
-           {(secondaryOptions.length >3)? <div className='buttonBar'><div className='leftButton' onClick={() => scroll(-30)} style={{overflowX:'unset',position:'fixed',zIndex:'2000',marginTop:'2rem',borderRadius:'50%',borderColor:'white',backgroundColor:'white',padding:'8px',boxShadow:'0 10px 6px -6px grey',width:'1.8%',height:'6%'}}><LeftOutlined style={{ fontSize: '16px', color: ' #00A94E' }} /></div><div style={{display:'flex',justifyContent:'flex-end'}}><div className='rightButton' onClick={() => scroll(30)} style={{overflowX:'unset',position:'fixed',zIndex:'2000',marginTop:'2rem',borderRadius:'50%',borderColor:'white',backgroundColor:'white',padding:'8px',boxShadow:'0 10px 6px -6px grey',width:'1.8%',height:'6%'}}><RightOutlined style={{ fontSize: '16px', color: ' #00A94E' }} /></div></div></div> :null }
+           {(secondaryOptions.length >3)? <div className='buttonBar'><div className='leftButton' onClick={() => scroll(-30)} style={{overflowX:'unset',position:'fixed',zIndex:'2000',marginTop:'2rem',borderRadius:'50%',borderColor:'white',backgroundColor:'white',padding:'8px',boxShadow:'0 10px 6px -6px grey',width:'30px',height:'30px'}}><LeftOutlined style={{ fontSize: '16px', color: ' #00A94E',verticalAlign:'super' }} /></div><div style={{display:'flex',justifyContent:'flex-end'}}><div className='rightButton' onClick={() => scroll(30)} style={{overflowX:'unset',position:'fixed',zIndex:'2000',marginTop:'2rem',borderRadius:'50%',borderColor:'white',backgroundColor:'white',padding:'8px',boxShadow:'0 10px 6px -6px grey',width:'30px',height:'30px'}}><RightOutlined style={{ fontSize: '16px', color: ' #00A94E',verticalAlign:'super' }} /></div></div></div> :null }
          
           <SecondaryBar className='secondary-bar-wrapper col-padding' show={secondaryOptions && secondaryOptions.length} ref={ref}>
           {secondaryOptions.map((label, i) => (

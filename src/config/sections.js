@@ -9,10 +9,10 @@ export default [
             label: 'GEAR',
             inputs: ['GEAR_VISIBILITY'],
           },
-          /*{
-            label: 'OUTER SHELL',
+          {
+            label: 'MATERIALS',
             inputs: ['outerShell'],
-          },*/
+          },
           {
             label: 'COLOR',
             inputs: ['color'],

@@ -73,7 +73,7 @@ export const SecondaryBarItem = styled.div`
   opacity: ${props => (props.disabled ? 0.5 : 1)};
   border-radius: 5px;
   width:7rem;
-  font-size:16px;
+  font-size:14px;
   font-weight:200;
   font-weight:bold !important;
 `;

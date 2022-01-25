@@ -9,7 +9,7 @@ export default {
     data: 'tk-platform',
     cssClass: 'active',
     optionNumber: {
-      Athletix: 'NA',
+      Athletix: 'A/B',
       Jacket: 'A',
       Pants: 'B'
     },
@@ -26,9 +26,9 @@ export default {
     gear: 'athletix'
   },
 
- /* outerShell: {
+  outerShell: {
     label: 'Materials',
-    attribute: 'OUTER SHELL',
+    attribute: 'MATERIALS',
     type: 'radioButtons',
     data: 'tk-platform',
     cssClass: 'active',
@@ -42,7 +42,7 @@ export default {
       'PBI Stretch': 'NA',
     },
     gear: 'athletix'
-  },*/
+  },
 
   color: {
     label: 'Color',
@@ -73,13 +73,13 @@ export default {
     cssClass: 'active',
     selected: true,
     optionNumber: {
-      'Caldura Elite Nomex Nano': 'N2',
+      'Titanium™ with Nomex Nano': 'N3',
     },
     optionGroup: {
-      'Caldura Elite Nomex Nano': 'NA',
+      'Titanium™ with Nomex Nano': 'NA',
     },
     optionType: {
-      'Caldura Elite Nomex Nano': 'NA',
+      'Titanium™ with Nomex Nano': 'NA',
     },
     gear: 'athletix'
   },
@@ -155,8 +155,8 @@ export default {
     selected: true,
     cssClass: 'active',
     optionNumber: {
-      NFPAB: 'NA',
-      NYC: 'NA',
+      NFPAB: '17C783',
+      NYC: '17C703',
     },
     optionGroup: {
       NFPAB: 'NA',
@@ -176,16 +176,16 @@ export default {
     data: 'tk-platform',
     cssClass: 'active',
     optionNumber: {
-      NFPAB: 'NA',
-      NYC: 'NA',
+      Orange: 'R/O',
+      Yellow: 'L/Y',
     },
     optionGroup: {
-      NFPAB: 'NA',
-      NYC: 'NA',
+      Orange: 'NA',
+      Yellow: 'NA',
     },
     optionType: {
-      NFPAB: 'NFPAB',
-      NYC: 'NYC',
+      Orange: 'NA',
+      Yellow: 'NA',
     },
     gear: 'athletix'
   },
@@ -198,8 +198,7 @@ export default {
     selected: true,
     cssClass: 'active',
     optionNumber: {
-      NFPAB: 'NA',
-      NYC: 'NA',
+      '3" AROUND CUFFS': '27C03',
     },
     optionGroup: {
       NFPAB: 'NA',
@@ -219,16 +218,16 @@ export default {
     data: 'tk-platform',
     cssClass: 'active',
     optionNumber: {
-      NFPAB: 'NA',
-      NYC: 'NA',
+      Orange: 'R/O',
+      Yellow: 'L/Y',
     },
     optionGroup: {
-      NFPAB: 'NA',
-      NYC: 'NA',
+      Orange: 'NA',
+      Yellow: 'NA',
     },
     optionType: {
-      NFPAB: 'NFPAB',
-      NYC: 'NYC',
+      Orange: 'NA',
+      Yellow: 'NA',
     },
     gear: 'athletix'
   },
@@ -1122,7 +1121,7 @@ export default {
 
   sleeveWellConfiguration: {
     label: 'Sleeve Well Configuration',
-    attribute: 'SLEEVE WELL CONFIGURATION',
+    attribute: 'SLEEVE WELL',
     type: 'radioButtons',
     data: 'tk-platform',
     optionNumber: {
@@ -1200,13 +1199,13 @@ export default {
     type: 'radioButtons',
     data: 'tk-platform',
     optionNumber: {
-      'TH SHOULDER 2LYR N2 ATX': 'N1N2ATX',
+      'TH SHOULDER 2LYR ATX': 'N1STCCHA',
     },
     optionGroup: {
-      'TH SHOULDER 2LYR N2 ATX': 'REINFORCEMENT',
+      'TH SHOULDER 2LYR ATX': 'REINFORCEMENT',
     },
     optionType: {
-      'TH SHOULDER 2LYR N2 ATX': 'PADD',
+      'TH SHOULDER 2LYR ATX': 'PADD',
     },
     gear: 'Jacket'
   },
