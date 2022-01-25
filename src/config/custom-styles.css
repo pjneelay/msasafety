@@ -251,7 +251,7 @@ button, a, h1, h2, h3 {
     height: 100%;
 }
 .dd--span__breadcrum{
-    font-size: 25px;
+    font-size: 22px;
     margin: 0 10px;
 }
 #root .regular-wapper{
@@ -296,8 +296,7 @@ button, a, h1, h2, h3 {
     display: grid;
     display: flex;
     grid-template-columns: auto max-content;
-    grid-gap: 8px;
-    padding: 4px 20px;
+    padding: 4px 10px;
     border-bottom: 1px solid #858990;
     flex-wrap: wrap;
 }
@@ -415,7 +414,7 @@ button, a, h1, h2, h3 {
 dd{
     display: flex;
     align-items: center;
-    font-size: 1.2em;
+    font-size: 1em;
 }
 /* #root .configuration-table-optionNumber{
     width: 25%;
@@ -423,7 +422,7 @@ dd{
 #root .configuration-table-attribute{
     align-self: center;
     font-weight: 700;
-    font-size: 1.2em;
+    font-size: 1em;
     margin-bottom: 0.5em;
     margin-left: 0;
 }

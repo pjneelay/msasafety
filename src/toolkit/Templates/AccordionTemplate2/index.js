@@ -86,6 +86,7 @@ const AccordionTemplate2 = ({
   let type = '';
   let groupTitle = '';
   let gear = '';
+  let label='';
   let html = [];
   let gearSelected = localStorage.getItem('gearSelected');
   let gearTitle = '';
@@ -95,7 +96,7 @@ const AccordionTemplate2 = ({
     let groupsDom = document.querySelectorAll(".configuration-wrapper .group");
  
     for (let a = 0; a < groupsDom.length; a++){
-      console.log(a,groupsDom[a]);
+      
       if(a !== 0 && a !== 9 && a !== 25 && a!==39){
         groupsDom[a].style.display = "none";
       }
@@ -109,6 +110,7 @@ const AccordionTemplate2 = ({
       number = '';
       type = '';
       gear = '';
+      label='';
       let sortGroup = { 'NA': 1, CLOS: 2, GENERIC: 3, HOLDER: 4, LTRG: 5, MISCELLANEOUS: 6, PATCH: 7, PCKT: 8, REINFORCEMENT: 9, SUSPENDER: 10, SLVW: 11, TRIM: 12 };
       let sortByGearGroup = { 'athletix': 1, 'Jacket': 2, 'Pants': 3 }
       if (key.includes('Row') || key.includes('Patch Lettering')) {
@@ -124,6 +126,7 @@ const AccordionTemplate2 = ({
             number = inputs[keyInput].optionNumber[configuration[key]];
             type = inputs[keyInput].optionType[configuration[key]];
             gear = inputs[keyInput].gear;
+            label=inputs[keyInput].label;
           }
         }
         if (configuration[key].assetId !== undefined && configuration[key].assetId !== '' && !key.includes('Row') && !key.includes('Patch Lettering') && (gearSelected === gear || gear === 'athletix')) {
@@ -135,6 +138,7 @@ const AccordionTemplate2 = ({
             attribute: key,
             sortValue: sortGroup[group],
             gear: gear ? gear : inputs[keyInput].gear ? inputs[keyInput].gear : "",
+            label: label ? label : inputs[keyInput].label ? inputs[keyInput].label : "",
             sortByGear: sortByGearGroup[gear]
           })
 
@@ -147,6 +151,7 @@ const AccordionTemplate2 = ({
             attribute: key,
             sortValue: sortGroup[group],
             gear: gear ? gear : inputs[keyInput].gear ? inputs[keyInput].gear : "",
+            label: label ? label : inputs[keyInput].label ? inputs[keyInput].label : "",
             sortByGear: sortByGearGroup[gear]
           })
         }
@@ -288,10 +293,10 @@ const AccordionTemplate2 = ({
     html = [];
     if (itemGroup !== null && ifExistSection(itemGroup,gearTitle) === false) {
       for (var i = 0; i < newConfiguration.length; i++) {
-       
+       //console.log(newConfiguration[i]);
         if (newConfiguration[i].gear === gearTitle && gearArray[gearTitle] == "groupNotAdded") {
           html.push(<div key={i} className='group-content-row configuration-table-div'>
-            <dt className='configuration-table-attribute'>{newConfiguration[i].attribute}: </dt>
+            <dt className='configuration-table-attribute'>{newConfiguration[i].label}: </dt>
             <dd className='configuration-table-optionNumber'>{newConfiguration[i].optionNumber}</dd>
            {/* <dd className='configuration-table-optionGroup'>{newConfiguration[i].optionGroup ? <span className='dd--span__breadcrum'>|</span> : ""}{newConfiguration[i].optionGroup}</dd>*/}
             <dd className='configuration-table-optionDescription'>{newConfiguration[i].optionDescription? <span className='dd--span__breadcrum'>|</span> : ""}{newConfiguration[i].optionDescription}</dd>
@@ -448,8 +453,16 @@ const AccordionTemplate2 = ({
           )} */}
           
           <div className='configuration-wrapper'>
-          <div className="summary--padding" style={{color:'red'}}>*<span style={{color: "#57585A"}}>Swipe down and save your design</span></div>
-            {newConfiguration.map((item, index) => (
+          <div className="summary--padding" >
+            <span style={{color: "#57585A",display:'flex',justifyContent:'center'}}>Images displayed are for illustration purposes only. Actual product may vary.
+              <a href="https://globe.msasafety.com/configurator/support">Learn more</a> 
+            </span>
+            <br></br>
+            <h2 style={{color: "#57585A",display:'flex',justifyContent:'center',color:'#00A94E'}}>CONFIGURATION</h2>
+        
+            <span style={{color: "#57585A",display:'flex',justifyContent:'center'}}><span style={{color:'red'}}>*</span>Swipe down and save your design</span>
+          </div>
+          {newConfiguration.map((item, index) => (
               <div key={item + index} className='group'>
                 {groupTitle !== item.optionGroup ? <div className='header-gear summary--padding'>{gearHeader(item)}</div> : null}
                 {/* {groupTitle !== item.optionGroup && ifExistSection(item.optionGroup,gearTitle) === false ? <div className='group-header'>{item.optionGroup}</div> : null} */}
@@ -459,6 +472,14 @@ const AccordionTemplate2 = ({
           </div>
 
           <div className='lettering-wrapper'>
+          <div className="summary--padding" >
+            <span style={{color: "#57585A",display:'flex',justifyContent:'center'}}>Images displayed are for illustration purposes only. Actual product may vary.
+              <a href="https://globe.msasafety.com/configurator/support">Learn more</a> 
+            </span>
+            <br></br>
+            <h2 style={{color: "#57585A",display:'flex',justifyContent:'center',color:'#00A94E'}}>LETTERING</h2>
+        
+        </div>
           {letteringConfiguration == null && letteringConfiguration == '' ?'':''}
             {letteringConfiguration.map((item, index) => (
               <div key={index}>

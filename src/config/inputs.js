@@ -3,7 +3,7 @@ export default {
     *************** Material Options *****************
     **************************************************/
   GEAR_VISIBILITY: {
-    label: 'GEAR',
+    label: 'Gear',
     attribute: 'GEAR_VISIBILITY',
     type: 'RadioButtonsImages',
     data: 'tk-platform',
@@ -148,7 +148,7 @@ export default {
   },
 
   COAT_TRIM_TYPE: {
-    label: 'Trim Type',
+    label: 'Coat Trim Type',
     attribute: 'COAT TRIM TYPE',
     type: 'radioButtons',
     data: 'tk-platform',
@@ -170,7 +170,7 @@ export default {
   },
 
   COAT_TRIM_COLOR: {
-    label: 'Trim Color',
+    label: 'Coat Trim Color',
     attribute: 'COAT TRIM COLOR',
     type: 'RadioButtonsImages',
     data: 'tk-platform',
@@ -191,7 +191,7 @@ export default {
   },
 
   PANTS_TRIM_TYPE: {
-    label: 'Trim Type',
+    label: 'Pant Trim Type',
     attribute: 'PANTS TRIM TYPE',
     type: 'radioButtons',
     data: 'tk-platform',
@@ -212,7 +212,7 @@ export default {
   },
 
   PANTS_TRIM_COLOR: {
-    label: 'Trim Color',
+    label: 'Pant Trim Color',
     attribute: 'PANTS TRIM COLOR',
     type: 'RadioButtonsImages',
     data: 'tk-platform',
@@ -237,7 +237,7 @@ export default {
 
   /*************** FRONT **********************/
   JACKET_FRONT_STORMFLAP_CLOSURE: {
-    label: 'CLOSURE',
+    label: 'Closure',
     attribute: 'JACKET_FRONT_STORMFLAP_CLOSURE',
     type: 'radioButtons',
     data: 'tk-platform',
@@ -1120,7 +1120,7 @@ export default {
   },
 
   sleeveWellConfiguration: {
-    label: 'Sleeve Well Configuration',
+    label: 'Sleeve Well',
     attribute: 'SLEEVE WELL',
     type: 'radioButtons',
     data: 'tk-platform',
@@ -1339,7 +1339,7 @@ export default {
   },
 
   drdStrap: {
-    label: 'DRD Strap',
+    label: 'Drd Strap',
     attribute: 'DRD STRAP',
     type: 'radioButtons',
     data: 'tk-platform',
@@ -1673,13 +1673,13 @@ export default {
     type: 'radioButtons',
     data: 'tk-platform',
     optionNumber: {
-      'BLK ARASHIELD POCKET PULL TAB  ': 'N2STPTA1',
+      'BLK ARASHIELD POCKET PULL TAB': 'N2STPTA1',
     },
     optionGroup: {
-      'BLK ARASHIELD POCKET PULL TAB  ': 'PCKT',
+      'BLK ARASHIELD POCKET PULL TAB': 'PCKT',
     },
     optionType: {
-      'BLK ARASHIELD POCKET PULL TAB  ': 'OTHER',
+      'BLK ARASHIELD POCKET PULL TAB': 'OTHER',
     },
     gear: 'Pants'
   },
@@ -1720,7 +1720,7 @@ export default {
 
   /*************** OTHER ****************************/
   PANT_OTHER_PANTS_CUFF: {
-    label: '',
+    label: 'Pant Cuffs',
     attribute: 'PANT_OTHER_PANTS_CUFF',
     type: 'radioButtons',
     data: 'tk-platform',
@@ -1740,7 +1740,7 @@ export default {
   },
 
   PANT_OTHER_KNEES_REINFORCEMENT: {
-    label: '',
+    label: 'Knees Reinforcements',
     attribute: 'PANT_OTHER_KNEES_REINFORCEMENT',
     type: 'radioButtons',
     data: 'tk-platform',
@@ -1760,7 +1760,7 @@ export default {
   },
 
   PANT_OTHER_KNEES_PADDING_LINING: {
-    label: '',
+    label: 'Knees Padding - Lining',
     attribute: 'PANT_OTHER_KNEES_PADDING_LINING',
     type: 'radioButtons',
     data: 'tk-platform',
@@ -1800,7 +1800,7 @@ export default {
   },
 
   PANT_OTHER_SUSPENDERS: {
-    label: '',
+    label: 'Suspenders',
     attribute: 'PANT_OTHER_SUSPENDERS',
     type: 'radioButtons',
     data: 'tk-platform',
@@ -1820,18 +1820,18 @@ export default {
   },
 
   PANT_OTHER_MANDATORY_CCHR: {
-    label: '',
+    label: 'Mandatory CCHR',
     attribute: 'PANT_OTHER_MANDATORY_CCHR',
     type: 'radioButtons',
     data: 'tk-platform',
     optionNumber: {
-      'KNEE LINER 2LYR N2 ATX     ': 'N2N2ATX',
+      'KNEE LINER 2LYR ATX': 'N2N2ATX',
     },
     optionGroup: {
-      'KNEE LINER 2LYR N2 ATX     ': 'REINFORCEMENT',
+      'KNEE LINER 2LYR ATX': 'REINFORCEMENT',
     },
     optionType: {
-      'KNEE LINER 2LYR N2 ATX     ': 'PADD',
+      'KNEE LINER 2LYR ATX': 'PADD',
     },
     gear: 'Pants'
   },
