@@ -96,8 +96,8 @@ const AccordionTemplate2 = ({
     let groupsDom = document.querySelectorAll(".configuration-wrapper .group");
  
     for (let a = 0; a < groupsDom.length; a++){
-      
-      if(a !== 0 && a !== 9 && a !== 25 && a!==39){
+      console.log("group",a, groupsDom[a]);
+      if(a !== 0 && a !== 9 && a !== 25 && a!==39 && a!==6 && a!==2){
         groupsDom[a].style.display = "none";
       }
       groupsDom[a].style.marginBottom = a == 25 ? "20px" : 0;

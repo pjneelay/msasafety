@@ -1477,24 +1477,24 @@ export default {
     gear: 'Pants'
   },
 
-  /*************** SIDE POCKETS RIGHT **********************/
+  /*************** SIDE POCKETS RIGHT **********************/  
   PANT_SIDE_POCKETS_RIGHT_SIZE_TYPE: {
     label: 'SIZE & TYPE',
     attribute: 'PANT_SIDE_POCKETS_RIGHT_SIZE_TYPE',
     type: 'radioButtons',
     data: 'tk-platform',
     optionNumber: {
-      'SLN EXPANTION POCKET 2x10x8/11': 'N2STPKA1',
+      'SLNT EXPANSION POCKET 2x10x8/11': 'N2STPKA1',
       'ESCAPE SYSTEM POCKET CROSBY 2X7X8 RPKT': 'N242285',
       'ESCAPE SYSTEM POCKET CMC 2X8X9 RPKT': 'N242389R',
     },
     optionGroup: {
-      'SLN EXPANTION POCKET 2x10x8/11': 'PCKT',
+      'SLNT EXPANSION POCKET 2x10x8/11': 'PCKT',
       'ESCAPE SYSTEM POCKET CROSBY 2X7X8 RPKT': 'PCKT',
       'ESCAPE SYSTEM POCKET CMC 2X8X9 RPKT': 'PCKT',
     },
     optionType: {
-      'SLN EXPANTION POCKET 2x10x8/11': 'EXPANSION',
+      'SLNT EXPANSION POCKET 2x10x8/11': 'EXPANSION',
       'ESCAPE SYSTEM POCKET CROSBY 2X7X8 RPKT': 'ESCAPE SYSTEM POCKET',
       'ESCAPE SYSTEM POCKET CMC 2X8X9 RPKT': 'ESCAPE SYSTEM POCKET',
     },
@@ -1523,7 +1523,6 @@ export default {
     },
     gear: 'Pants'
   },
-
   PANT_SIDE_POCKETS_RIGHT_OUTSITE_REINFORCEMENT: {
     label: 'OUTSIDE REINFORCEMENT',
     attribute: 'PANT_SIDE_POCKETS_RIGHT_OUTSITE_REINFORCEMENT',
@@ -1550,7 +1549,6 @@ export default {
     },
     gear: 'Pants'
   },
-
   PANT_SIDE_POCKETS_RIGHT_POCKET_DIVIDER: {
     label: 'POCKET DIVIDER',
     attribute: 'PANT_SIDE_POCKETS_RIGHT_POCKET_DIVIDER',
