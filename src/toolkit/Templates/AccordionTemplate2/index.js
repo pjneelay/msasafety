@@ -110,13 +110,20 @@ const AccordionTemplate2 = ({
 
   if (configuration !== null) {
     const accordionSections = sections;
+    //console.log("sections",sections);
     let e = 0;
     for(let a = 0; a < accordionSections.length; a++ ){
       if(accordionSections[a].label.toLowerCase() !== "summary"){
         for(let b = 0; b < accordionSections[a].sections.length; b++ ){
           for(let c = 0; c < accordionSections[a].sections[b].sections.length; c++){
             for(let d = 0; d < accordionSections[a].sections[b].sections[c].inputs.length; d++){
-              arrayOfSubHeaders[e] = {header: accordionSections[a].label.toLowerCase(), subHeader: accordionSections[a].sections[b].label, attr: accordionSections[a].sections[b].sections[c].label, input: accordionSections[a].sections[b].sections[c].inputs[d]}
+              if(accordionSections[a].sections[b].label=="Trim" || accordionSections[a].sections[b].label=="SIDE POCKETS" || accordionSections[a].sections[b].label=="FRONT")
+              {   
+                arrayOfSubHeaders[e] = {header: accordionSections[a].label.toLowerCase(), subHeader: accordionSections[a].sections[b].sections[c].label, attr: accordionSections[a].sections[b].sections[c].label, input: accordionSections[a].sections[b].sections[c].inputs[d]}
+              }
+              else{
+                arrayOfSubHeaders[e] = {header: accordionSections[a].label.toLowerCase(), subHeader: accordionSections[a].sections[b].label, attr: accordionSections[a].sections[b].sections[c].label, input: accordionSections[a].sections[b].sections[c].inputs[d]}
+              }
               e++;
             }
           }
@@ -328,8 +335,9 @@ const AccordionTemplate2 = ({
     html = [];
     if (itemGroup !== null && ifExistSection(itemGroup,gearTitle) === false) {
       for (var i = 0; i < newConfiguration.length; i++) {
-        debugger
+       // debugger
         if (newConfiguration[i].gear === gearTitle && gearArray[gearTitle] == "groupNotAdded" && newConfiguration[i].attribute !== "ACTIVE_CAMERA") {
+          //console.log(i,newConfiguration[i].subHeader);
           html.push(
             <div>
               {newConfiguration[i].subHeader && previousSubHeader !== newConfiguration[i].subHeader ? <div className='group-header'>{newConfiguration[i].subHeader}</div> : null}

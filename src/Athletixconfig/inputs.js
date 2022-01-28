@@ -3,7 +3,7 @@ export default {
     *************** Material Options *****************
     **************************************************/
   GEAR_VISIBILITY: {
-    label: 'Materials',
+    label: 'Gear',
     attribute: 'GEAR_VISIBILITY',
     type: 'RadioButtonsImages',
     data: 'tk-platform',

@@ -3,7 +3,7 @@ export default [
     label: 'athletix ™',
     sections: [
       {
-        label: 'Materials',
+        label: 'MATERIALS',
         sections: [
           {
             label: 'GEAR',
@@ -278,7 +278,7 @@ export default [
         ]
       },
       {
-        label: 'OTHER',
+        label: 'OTHER PANTS',
         sections: [
           {
             label: 'PANT CUFFS',
