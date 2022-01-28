@@ -1,10 +1,10 @@
 import React from 'react';
 import { Templates } from '../toolkit';
 
-import templateData from '../config/template';
-import sectionsData from '../config/sections';
-import inputsData from '../config/inputs';
-import threekitConfig from '../config/threekitConfig';
+import templateData from '../Gxtremeconfig/template';
+import sectionsData from '../Gxtremeconfig/sections';
+import inputsData from '../Gxtremeconfig/inputs';
+import threekitConfig from '../Gxtremeconfig/threekitConfig';
 
 const GxtremeHome = () => {
     return (

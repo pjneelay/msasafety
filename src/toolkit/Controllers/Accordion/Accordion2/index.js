@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import { Wrapper } from './accordion2.styles';
 import { ArrowRightOutlined } from '@ant-design/icons';
 import InputComponents from '../../../InputComponents';
-import Navigations from '../../../../config/navigation';
+import Navigations from '../../../../Athletixconfig/navigation';
 
 const Accordion2 = ({ sections, configuration, handleSetAttribute }) => {
   const [selectedSection, setSelectedSection] = useState(null);

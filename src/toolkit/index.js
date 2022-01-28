@@ -1,5 +1,5 @@
 import 'antd/dist/antd.css';
-import '../config/custom-styles.css';
+import '../Athletixconfig/custom-styles.css';
 
 import toolkit from './toolkit';
 

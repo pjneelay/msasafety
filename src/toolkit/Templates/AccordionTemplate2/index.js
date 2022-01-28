@@ -11,7 +11,8 @@ import {
   ZoomButtons,
 } from './accordionTemplate2.styles';
 import { useForm } from "react-hook-form";
-import inputs from "../../../config/inputs";
+import inputs from "../../../Athletixconfig/inputs";
+import sections from "../../../Athletixconfig/sections"
 import { pdfService } from "../../../toolkit/toolkit/pdfService"
 import toolkit from '../../toolkit';
 import Modal from "react-modal";
@@ -91,28 +92,48 @@ const AccordionTemplate2 = ({
   let gearSelected = localStorage.getItem('gearSelected');
   let gearTitle = '';
   let existSections = [];
+  var arrayOfSubHeaders = [{}];
+  let subHeader="";
+  let previousSubHeader="";
 
   useEffect(() => {
     let groupsDom = document.querySelectorAll(".configuration-wrapper .group");
  
     for (let a = 0; a < groupsDom.length; a++){
-      console.log("group",a, groupsDom[a]);
-      if(a !== 0 && a !== 9 && a !== 25 && a!==39 && a!==6 && a!==2){
+      
+      if(a !== 0 && a !== 9 && a !== 25 && a!==39){
         groupsDom[a].style.display = "none";
       }
       groupsDom[a].style.marginBottom = a == 25 ? "20px" : 0;
     }
   })
-  
+
   if (configuration !== null) {
+    const accordionSections = sections;
+    let e = 0;
+    for(let a = 0; a < accordionSections.length; a++ ){
+      if(accordionSections[a].label.toLowerCase() !== "summary"){
+        for(let b = 0; b < accordionSections[a].sections.length; b++ ){
+          for(let c = 0; c < accordionSections[a].sections[b].sections.length; c++){
+            for(let d = 0; d < accordionSections[a].sections[b].sections[c].inputs.length; d++){
+              arrayOfSubHeaders[e] = {header: accordionSections[a].label.toLowerCase(), subHeader: accordionSections[a].sections[b].label, attr: accordionSections[a].sections[b].sections[c].label, input: accordionSections[a].sections[b].sections[c].inputs[d]}
+              e++;
+            }
+          }
+        }
+      }
+    };
     for (var key in configuration) {
       group = '';
       number = '';
       type = '';
       gear = '';
       label='';
+      subHeader="";
       let sortGroup = { 'NA': 1, CLOS: 2, GENERIC: 3, HOLDER: 4, LTRG: 5, MISCELLANEOUS: 6, PATCH: 7, PCKT: 8, REINFORCEMENT: 9, SUSPENDER: 10, SLVW: 11, TRIM: 12 };
-      let sortByGearGroup = { 'athletix': 1, 'Jacket': 2, 'Pants': 3 }
+      let sortByGearGroup = { 'athletix': 1, 'Jacket': 2, 'Pants': 3 };
+      const seeInputs = inputs;
+      let unitAccordionSections;
       if (key.includes('Row') || key.includes('Patch Lettering')) {
         lettering.push({ key: key, description: configuration[key] });
       }
@@ -121,15 +142,19 @@ const AccordionTemplate2 = ({
 
         for (var keyInput in inputs) {
           if (inputs[keyInput].attribute === key && !key.includes('Row')) {
+            //let unitAccordionSections = arrayOfSubHeaders.filter(section => section.header == inputs[keyInput].gear.toLowerCase() && keyInput.toLowerCase() == section.input.toLowerCase());
 
             group = inputs[keyInput].optionGroup[configuration[key]];
             number = inputs[keyInput].optionNumber[configuration[key]];
             type = inputs[keyInput].optionType[configuration[key]];
             gear = inputs[keyInput].gear;
             label=inputs[keyInput].label;
+           // subHeader = unitAccordionSections[0] ? unitAccordionSections[0].subHeader : "";
           }
+
         }
         if (configuration[key].assetId !== undefined && configuration[key].assetId !== '' && !key.includes('Row') && !key.includes('Patch Lettering') && (gearSelected === gear || gear === 'athletix')) {
+          // unitAccordionSections = arrayOfSubHeaders.filter(section => section.header == inputs[key].gear.toLowerCase() && key.toLowerCase() == section.input.toLowerCase());
           newConfiguration.push({
             optionNumber: number ? number : inputs[keyInput].optionNumber[gear] ? inputs[keyInput].optionNumber[gear] : "",
             optionGroup: group ? group :  inputs[keyInput].optionGroup[gear] ? inputs[keyInput].optionGroup[gear] : "",
@@ -139,10 +164,12 @@ const AccordionTemplate2 = ({
             sortValue: sortGroup[group],
             gear: gear ? gear : inputs[keyInput].gear ? inputs[keyInput].gear : "",
             label: label ? label : inputs[keyInput].label ? inputs[keyInput].label : "",
-            sortByGear: sortByGearGroup[gear]
+            sortByGear: sortByGearGroup[gear],
+            // subHeader: unitAccordionSections[0] ? unitAccordionSections[0].subHeader : ""
           })
 
         } else if (configuration[key].assetId === undefined && !key.includes('Row') && !key.includes('Patch Lettering') && configuration[key] !== "None" && configuration[key] !== "NONE" && (gearSelected === gear || gear === 'athletix' || gearSelected === 'Athletix')) {
+          // unitAccordionSections = arrayOfSubHeaders.filter(section => section.header == inputs[key].gear.toLowerCase() && key.toLowerCase() == section.input.toLowerCase());
           newConfiguration.push({
             optionNumber: number ? number : inputs[keyInput].optionNumber[gear] ? inputs[keyInput].optionNumber[gear] : "",
             optionGroup: group ? group :  inputs[keyInput].optionGroup[gear] ? inputs[keyInput].optionGroup[gear] : "",
@@ -152,7 +179,8 @@ const AccordionTemplate2 = ({
             sortValue: sortGroup[group],
             gear: gear ? gear : inputs[keyInput].gear ? inputs[keyInput].gear : "",
             label: label ? label : inputs[keyInput].label ? inputs[keyInput].label : "",
-            sortByGear: sortByGearGroup[gear]
+            sortByGear: sortByGearGroup[gear],
+            // subHeader: unitAccordionSections[0] ? unitAccordionSections[0].subHeader : ""
           })
         }
       }
@@ -268,10 +296,17 @@ const AccordionTemplate2 = ({
     }
 
   }
-
+  for(let f = 0; f < newConfiguration.length; f++){
+    
+    let unitAccordionSections = arrayOfSubHeaders.filter(section => newConfiguration[f].attribute.toLowerCase().replace(/ /g, "_") == section.input.toLowerCase());
+    unitAccordionSections = unitAccordionSections.length > 0  ? unitAccordionSections : arrayOfSubHeaders.filter(section => newConfiguration[f].attribute.toLowerCase().replace(/ /g, "_") == section.attr.toLowerCase());
+    unitAccordionSections = unitAccordionSections.length > 0  ? unitAccordionSections : arrayOfSubHeaders.filter(section => newConfiguration[f].label.toLowerCase().replace(/ /g, "_") == section.input.toLowerCase());
+    unitAccordionSections = unitAccordionSections.length > 0  ? unitAccordionSections : arrayOfSubHeaders.filter(section => newConfiguration[f].label == section.attr);
+    newConfiguration[f].subHeader = unitAccordionSections.length > 0 ? unitAccordionSections[0].subHeader : " ";
+  }
+  
   // newConfiguration.sort(((a, b) => a.sortValue - b.sortValue));
   newConfiguration.sort(((a, b) => a.sortByGear - b.sortByGear));
-
   letteringConfiguration.sort(((a, b) => a.sortValue - b.sortValue));
   let secondaryOptions;
   // newConfiguration.sort(((a, b) => a.gear - b.gear));
@@ -293,32 +328,40 @@ const AccordionTemplate2 = ({
     html = [];
     if (itemGroup !== null && ifExistSection(itemGroup,gearTitle) === false) {
       for (var i = 0; i < newConfiguration.length; i++) {
-       //console.log(newConfiguration[i]);
-        if (newConfiguration[i].gear === gearTitle && gearArray[gearTitle] == "groupNotAdded") {
-          html.push(<div key={i} className='group-content-row configuration-table-div'>
-            <dt className='configuration-table-attribute'>{newConfiguration[i].label}: </dt>
-            <dd className='configuration-table-optionNumber'>{newConfiguration[i].optionNumber}</dd>
-           {/* <dd className='configuration-table-optionGroup'>{newConfiguration[i].optionGroup ? <span className='dd--span__breadcrum'>|</span> : ""}{newConfiguration[i].optionGroup}</dd>*/}
-            <dd className='configuration-table-optionDescription'>{newConfiguration[i].optionDescription? <span className='dd--span__breadcrum'>|</span> : ""}{newConfiguration[i].optionDescription}</dd>
-          </div>)
+        debugger
+        if (newConfiguration[i].gear === gearTitle && gearArray[gearTitle] == "groupNotAdded" && newConfiguration[i].attribute !== "ACTIVE_CAMERA") {
+          html.push(
+            <div>
+              {newConfiguration[i].subHeader && previousSubHeader !== newConfiguration[i].subHeader ? <div className='group-header'>{newConfiguration[i].subHeader}</div> : null}
+              <div key={i} className='group-content-row configuration-table-div'>
+                <dt className='configuration-table-attribute'>{newConfiguration[i].label}: </dt>
+                <dd className='configuration-table-optionNumber'>{newConfiguration[i].optionNumber}</dd>
+                {/* <dd className='configuration-table-optionGroup'>{newConfiguration[i].optionGroup ? <span className='dd--span__breadcrum'>|</span> : ""}{newConfiguration[i].optionGroup}</dd> */}
+                <dd className='configuration-table-optionDescription'>{newConfiguration[i].optionDescription? <span className='dd--span__breadcrum'>|</span> : ""}{newConfiguration[i].optionDescription}</dd>
+              </div>
+            </div>)
         }
         existSections.push({ group: itemGroup, gear: gearTitle });
         groupTitle = itemGroup;
+        previousSubHeader = newConfiguration[i].subHeader ? newConfiguration[i].subHeader : previousSubHeader
       }
+
     };
     gearArray[gearTitle] = "groupAdded";
   }
 
   const ifExistSection = (group, gear) => {
     for (var i = 0; i < existSections.length; i++) {
-      if (existSections[i].group === group && existSections[i].gear === gear) {
+      if (existSections[i].group === group && existSections[i].gear === gear && existSections[i].group === '') {
         return true;
       }
     }
     return false;
   };
 
-  const gearHeader = (item) => {
+  
+  const gearHeader = (item, arrayOfSubHeaders) => {
+   
     gear = '';
     if (item !== null && gearArray[item.gear] == "groupNotAdded") {
       if (gearTitle === '') {
@@ -340,7 +383,6 @@ const AccordionTemplate2 = ({
   }
 
   const openModal = (typeOfMessage) => {
-    // console.log('typeOfMessage',typeOfMessage);
     // typeOfMessage === true ? setModalMessage('Your mail has been sent successfuly !!')  : setModalMessage( 'The mail could not be sent !!');
     setModalMessage('Your mail has been sent successfully!!')
     setIsOpen(true);
@@ -464,8 +506,8 @@ const AccordionTemplate2 = ({
           </div>
           {newConfiguration.map((item, index) => (
               <div key={item + index} className='group'>
-                {groupTitle !== item.optionGroup ? <div className='header-gear summary--padding'>{gearHeader(item)}</div> : null}
-                {/* {groupTitle !== item.optionGroup && ifExistSection(item.optionGroup,gearTitle) === false ? <div className='group-header'>{item.optionGroup}</div> : null} */}
+                {groupTitle !== item.optionGroup ? <div className='header-gear summary--padding'>{gearHeader(item, arrayOfSubHeaders)}</div> : null}
+                {/* {subHeadersApply(item, arrayOfSubHeaders)} */}
                 {groupTitle !== item.optionGroup ? <div className='group-content'> <dl className='configuration-table'>{configurationSection(item.optionGroup)}{html.map((item, index) => (item))}</dl> </div> : null}
               </div>
             ))}

@@ -3,7 +3,7 @@ export default {
     *************** Material Options *****************
     **************************************************/
   GEAR_VISIBILITY: {
-    label: 'Gear',
+    label: 'Materials',
     attribute: 'GEAR_VISIBILITY',
     type: 'RadioButtonsImages',
     data: 'tk-platform',
@@ -23,10 +23,10 @@ export default {
       Jacket: 'NA',
       Pants: 'NA',
     },
-    gear: 'athletix'
+    gear: 'athletix',
   },
 
-  outerShell: {
+  OUTER_SHELL: {
     label: 'Materials',
     attribute: 'MATERIALS',
     type: 'radioButtons',
@@ -44,7 +44,7 @@ export default {
     gear: 'athletix'
   },
 
-  color: {
+  COLOR: {
     label: 'Color',
     attribute: 'Color',
     type: 'RadioButtonsImages',
@@ -65,7 +65,7 @@ export default {
     gear: 'athletix'
   },
 
-  thermalLiner: {
+  THERMAL_LINER: {
     label: 'Thermal Liner',
     attribute: 'THERMAL LINER',
     type: 'radioButtons',
@@ -84,7 +84,7 @@ export default {
     gear: 'athletix'
   },
 
-  moistureBarrier: {
+  MOISTURE_BARRIER: {
     label: 'Moisture Barrier',
     attribute: 'MOISTURE BARRIER',
     type: 'radioButtons',
@@ -310,7 +310,7 @@ export default {
     gear: 'Jacket'
   },
 
-  rightTopCollar: {
+  RIGHT_TOP_COLLAR: {
     label: 'Right Top Collar',
     attribute: 'RIGHT TOP COLLAR',
     type: 'radioButtons',
@@ -327,7 +327,7 @@ export default {
     gear: 'Jacket'
   },
 
-  leftTopCollar: {
+  LEFT_TOP_COLLAR: {
     label: 'Left Top Collar',
     attribute: 'LEFT TOP COLLAR',
     type: 'radioButtons',
@@ -344,9 +344,9 @@ export default {
     gear: 'Jacket'
   },
 
-  sizeAndType: {
-    label: 'Size and type',
-    attribute: 'SIZE & TYPE',
+  SIZE_AND_TYPE: {
+    label: 'SIZE AND TYPE',
+    attribute: 'SIZE AND TYPE',
     type: 'radioButtons',
     data: 'tk-platform',
     optionNumber: {
@@ -361,7 +361,7 @@ export default {
     gear: 'Jacket'
   },
 
-  outsideReinforcement: {
+  OUTSIDE_REINFORCEMENTS: {
     label: 'Outside Reinforcements',
     attribute: 'OUTSIDE REINFORCEMENTS',
     type: 'radioButtons',
@@ -378,7 +378,7 @@ export default {
     gear: 'Jacket'
   },
 
-  insideReinforcement: {
+  INSIDE_REINFORCEMENTS: {
     label: 'Inside Reinforcements',
     attribute: 'INSIDE REINFORCEMENTS',
     type: 'radioButtons',
@@ -395,7 +395,7 @@ export default {
     gear: 'Jacket'
   },
 
-  pullTab: {
+  PULL_TAB: {
     label: 'Pull Tab',
     attribute: 'PULL TAB',
     type: 'radioButtons',
@@ -413,7 +413,7 @@ export default {
   },
 
    /*************** RIGHT CHEST **********************/
-  rightSidePocketDivider: {
+  RIGHT_SIDE_POCKET_DIVIDER: {
     label: 'Right Side Pocket Divider',
     attribute: 'RIGHT SIDE POCKET DIVIDER',
     type: 'radioButtons',
@@ -430,7 +430,7 @@ export default {
     gear: 'Jacket'
   },
 
-  leftSidePocketDivider: {
+  LEFT_SIDE_POCKET_DIVIDER: {
     label: 'Left Side Pocket Divider',
     attribute: 'LEFT SIDE POCKET DIVIDER',
     type: 'radioButtons',
@@ -447,7 +447,7 @@ export default {
     gear: 'Jacket'
   },
 
-  rightChestSFPockets: {
+  RIGHT_CHESTSF_POCKETS: {
     label: 'Pockets',
     attribute: 'RIGHT POCKETS',
     type: 'radioButtons',
@@ -470,7 +470,7 @@ export default {
     gear: 'Jacket'
   },
 
-  rightChestSFTrimOverPocket: {
+  RIGHT_CHESTSF_TRIM_OVER_POCKET: {
     label: 'Trim Over Pocket',
     attribute: 'TRIM OVER POCKET',
     type: 'radioButtons',
@@ -480,7 +480,7 @@ export default {
     optionType: 'RADIO'
   },
 
-  rightChestSFMic: {
+  RIGHT_CHESTSF_MIC: {
     label: 'Holder Michrophone',
     attribute: 'RIGHT CHEST MIC',
     type: 'radioButtons',
@@ -497,7 +497,7 @@ export default {
     gear: 'Jacket'
   },
 
-  rightChestSFHoldersStormFlap: {
+  RIGHT_CHESTSF_HOLDERS_STORMFLAP: {
     label: 'Holder',
     attribute: 'RIGHT CHEST HOLDERS STORMFLAP',
     type: 'radioButtons',
@@ -538,7 +538,7 @@ export default {
     gear: 'Jacket'
   },
 
-  rightChestSFAntennaNotch: {
+  RIGHT_CHESTSF_ANTENNA_NOTCH: {
     label: 'Antenna Notch',
     attribute: 'ANTENNA NOTCH',
     type: 'radioButtons',
@@ -590,7 +590,7 @@ export default {
     gear: 'Jacket'
   },
 
-  leftChestSFPockets: {
+  LEFT_CHESTSF_POCKETS: {
     label: 'Pockets',
     attribute: 'LEFT POCKETS',
     type: 'radioButtons',
@@ -613,7 +613,7 @@ export default {
     gear: 'Jacket'
   },
 
-  leftChestSFTrimOverPocket: {
+  LEFT_CHESTSF_TRIM_OVER_POCKET: {
     label: 'Trim Over Pocket',
     attribute: 'LEFT TRIM OVER POCKET',
     type: 'radioButtons',
@@ -623,7 +623,7 @@ export default {
     optionType: 'NA'
   },
 
-  leftChestSFMic: {
+  LEFT_CHESTSF_MIC: {
     label: 'Holder Michrophone',
     attribute: 'LEFT CHEST MIC',
     type: 'radioButtons',
@@ -640,7 +640,7 @@ export default {
     gear: 'Jacket'
   },
 
-  leftChestSFAntennaNotch: {
+  LEFT_CHESTSF_ANTENNA_NOTCH: {
     label: 'Antenna Notch',
     attribute: 'LEFT ANTENNA NOTCH',
     type: 'radioButtons',
@@ -692,7 +692,7 @@ export default {
     gear: 'Jacket'
   },
 
-  leftChestSFHoldersStormFlap: {
+  LEFT_CHESTSF_HOLDERS_STORMFLAP: {
     label: 'Holders',
     attribute: 'LEFT HOLDERS',
     type: 'radioButtons',
@@ -736,7 +736,7 @@ export default {
     gear: 'Jacket'
   },
 
-  rightEmbroidery: {
+  RIGHT_EMBROIDERY: {
     label: 'CUSTOM PATCHES',
     attribute: 'RIGHT EMBROIDERY PATCHES',
     type: 'radioButtons',
@@ -761,7 +761,7 @@ export default {
     },
     gear: 'Jacket'
    },
-   rightFlags: {
+   RIGHT_FLAGS: {
     label: 'FLAGS',
     attribute: 'RIGHT FLAGS',
     type: 'radioButtons',
@@ -778,7 +778,7 @@ export default {
     gear: 'Jacket'
    },
 
-  rightEmbroideryPadding: {
+   RIGHT_EMBROIDERY_PADDING: {
     label: 'CUSTOM PRINTED PATCH PADDING',
     attribute: 'RIGHT EMBROIDERY PADDING',
     type: 'radioButtons',
@@ -795,7 +795,7 @@ export default {
     gear: 'Jacket'
   },
 
-  leftEmbroidery: {
+  LEFT_EMBROIDERY: {
     label: 'CUSTOM PATCHES',
     attribute: 'LEFT EMBROIDERY PATCHES',
     type: 'radioButtons',
@@ -820,7 +820,7 @@ export default {
     },
     gear: 'Jacket'
    },
-   leftFlags: {
+   LEFT_FLAGS: {
     label: 'FLAGS',
     attribute: 'LEFT FLAGS',
     type: 'radioButtons',
@@ -837,7 +837,7 @@ export default {
     gear: 'Jacket'
    },
 
-  leftEmbroideryPadding: {
+   LEFT_EMBROIDERY_PADDING: {
     label: 'CUSTOM PRINTED PATCH PADDING',
     attribute: 'LEFT EMBROIDERY PADDING',
     type: 'radioButtons',
@@ -854,7 +854,7 @@ export default {
     gear: 'Jacket'
   },
 
-  rightFrontNextSFHolders: {
+  RIGHT_FRONT_NEXTSF_HOLDERS: {
     label: 'Holders',
     attribute: 'RIGHT FRONT NEXT TO STORMFLAP',
     type: 'radioButtons',
@@ -874,7 +874,7 @@ export default {
     gear: 'Jacket'
   },
 
-  leftFrontNextSFHolders: {
+  LEFT_FRONT_NEXTSF_HOLDERS: {
     label: 'holders',
     attribute: 'LEFT FRONT NEXT TO STORMFLAP',
     type: 'radioButtons',
@@ -895,82 +895,82 @@ export default {
   },
 
   /* LETTERING */
-  lettersAText: {
+  LETTERS_A_TEXT: {
     label: 'A Letters Text',
     attribute: 'Row A Lettering Input',
     type: 'textInput',
     data: 'tk-platform',
   },
-  letterASize: {
+  LETTER_A_SIZE: {
     label: 'Letters Size',
     attribute: 'Row A Size Input',
     type: 'radioButtons',
     data: 'tk-platform',
   },
-  lettersAColor: {
+  LETTERS_A_COLOR: {
     label: 'Letters Color',
     attribute: 'Row A Color Input',
     type: 'RadioButtonsImages',
     data: 'tk-platform',
   },
 
-  letterBSize: {
+  LETTER_B_SIZE: {
     label: 'B Letters Size',
     attribute: 'Row B Size Input',
     type: 'radioButtons',
     data: 'tk-platform',
   },
 
-  lettersBColor: {
+  LETTERS_B_COLOR: {
     label: 'B Letters Color',
     attribute: 'Row B Color Input',
     type: 'RadioButtonsImages',
     data: 'tk-platform',
   },
 
-  lettersBText: {
+  LETTERS_B_TEXT: {
     label: 'B Letters Text',
     attribute: 'Row B Lettering Input',
     type: 'textInput',
     data: 'tk-platform',
   },
 
-  letterCSize: {
+  LETTER_C_SIZE: {
     label: 'C Letters Size',
     attribute: 'Row C Size Input',
     type: 'radioButtons',
     data: 'tk-platform',
   },
 
-  lettersCColor: {
+  LETTERS_C_COLOR: {
     label: 'C Letters Color',
     attribute: 'Row C Color Input',
     type: 'RadioButtonsImages',
     data: 'tk-platform',
   },
 
-  lettersCText: {
+  LETTERS_C_TEXT: {
     label: 'C Letters Text',
     attribute: 'Row C Lettering Input',
     type: 'textInput',
     data: 'tk-platform',
   },
 
-  letterDSize: {
+  LETTER_D_SIZE: {
     label: 'D Letters Size',
     attribute: 'Row D Size Input',
     type: 'radioButtons',
     data: 'tk-platform',
   },
 
-  // lettersDColor: {
+  // LETTERS_D_COLOR: {
   //   label: 'D Letters Color',
   //   attribute: 'Row D Color Input',
   //   type: 'radioButtons',
   //   data: 'tk-platform',
   // },
 
-  // lettersDText: {
+  // LETTERS_D_TEXT: {
   //   label: 'D Letters Text',
   //   attribute: 'Row D Lettering Input',
   //   type: 'textInput',
@@ -978,21 +978,21 @@ export default {
 
   // },
 
-  letterESize: {
+  LETTER_E_SIZE: {
     label: 'E Letters Size',
     attribute: 'Row E Size Input',
     type: 'radioButtons',
     data: 'tk-platform',
   },
 
-  lettersEColor: {
+  LETTERS_E_COLOR: {
     label: 'E Letters Color',
     attribute: 'Row E Color Input',
     type: 'RadioButtonsImages',
     data: 'tk-platform',
   },
 
-  lettersEText: {
+  LETTERS_E_TEXT: {
     label: 'E Letters Text',
     attribute: 'Row E Lettering Input',
     type: 'textInput',
@@ -1001,21 +1001,21 @@ export default {
   },
 
 
-  letterFSize: {
+  LETTER_F_SIZE: {
     label: 'F Letters Size',
     attribute: 'Row F Size Input',
     type: 'radioButtons',
     data: 'tk-platform',
   },
 
-  lettersFColor: {
+  LETTERS_F_COLOR: {
     label: 'F Letters Color',
     attribute: 'Row F Color Input',
     type: 'RadioButtonsImages',
     data: 'tk-platform',
   },
 
-  lettersFText: {
+  LETTERS_F_TEXT: {
     label: 'F Letters Text',
     attribute: 'Row F Lettering Input',
     type: 'textInput',
@@ -1052,7 +1052,7 @@ export default {
       optionType:'Type 1'
     },
   */
-  letterPatch: {
+  LETTER_PATCH: {
     label: 'PATCH',
     attribute: 'HANGING LETTER PATCH',
     type: 'radioButtons',
@@ -1069,7 +1069,7 @@ export default {
     gear: 'Jacket'
   },
 
-  letterSize: {
+  LETTER_SIZE: {
     label: 'Letters Size',
     attribute: 'Patch Lettering Size Input',
     type: 'radioButtons',
@@ -1089,7 +1089,7 @@ export default {
     gear: 'Jacket'
   },
 
-  lettersColor: {
+  LETTERS_COLOR: {
     label: 'Letters Color',
     attribute: 'Patch Lettering Color Input',
     type: 'RadioButtonsImages',
@@ -1109,7 +1109,7 @@ export default {
     gear: 'Jacket'
   },
 
-  lettersText: {
+  LETTERS_TEXT: {
     label: 'Letters Text',
     attribute: 'Patch Lettering Input',
     type: 'textInput',
@@ -1119,7 +1119,7 @@ export default {
     optionType: 'NA'
   },
 
-  sleeveWellConfiguration: {
+  SLEEVE_WELL: {
     label: 'Sleeve Well',
     attribute: 'SLEEVE WELL',
     type: 'radioButtons',
@@ -1136,8 +1136,8 @@ export default {
     gear: 'Jacket'
   },
 
-  wristerLiner: {
-    label: 'Wrister (Liner)',
+  WRISTER_LINER: {
+    label: 'WRISTER_LINER',
     attribute: 'WRISTER (LINER)',
     type: 'radioButtons',
     data: 'tk-platform',
@@ -1156,8 +1156,8 @@ export default {
     gear: 'Jacket'
   },
 
-  wristerLinerThumbHoleLoop: {
-    label: 'Wrister (Liner) Thumb Hole Loop',
+  WRISTER_LINER_THUMB_HOLE_LOOP: {
+    label: 'WRISTER_LINER_THUMB_HOLE_LOOP',
     attribute: 'WRISTER (LINER) THUMB HOLE LOOP',
     type: 'radioButtons',
     data: 'tk-platform',
@@ -1173,7 +1173,7 @@ export default {
     gear: 'Jacket'
   },
 
-  sleeveCuffs: {
+  SLEEVE_CUFFS: {
     label: 'Sleeve Cuffs',
     attribute: 'SLEEVE CUFFS',
     type: 'radioButtons',
@@ -1193,7 +1193,7 @@ export default {
     gear: 'Jacket'
   },
 
-  shoulderPadding: {
+  SHOULDER_PADDING: {
     label: 'Shoulder Padding',
     attribute: 'SHOULDER PADDING',
     type: 'radioButtons',
@@ -1210,7 +1210,7 @@ export default {
     gear: 'Jacket'
   },
 
-  globeguard: {
+  GLOBE_GUARD: {
     label: 'Globeguard',
     attribute: 'GLOBEGUARD',
     type: 'radioButtons',
@@ -1230,7 +1230,7 @@ export default {
     gear: 'Jacket'
   },
 
-  neckHangerLoop: {
+  NECK_HANGER_LOOP: {
     label: 'Neck Hanger Loop',
     attribute: 'NECK HANGER LOOP',
     type: 'radioButtons',
@@ -1247,7 +1247,7 @@ export default {
     gear: 'Jacket'
   },
 
-  hemSnapTabsSell: {
+  HEM_SNAP_TABS_SELL: {
     label: 'Hem Snap Tabs (Shell)',
     attribute: 'HEM SNAP TABS (SHELL)',
     type: 'radioButtons',
@@ -1267,7 +1267,7 @@ export default {
     gear: 'Jacket'
   },
 
-  hemSnapTabsLiner: {
+  HEM_SNAP_TABS_LINER: {
     label: 'Hem Snap Tabs (Liner)',
     attribute: 'HEM SNAP TABS (LINER)',
     type: 'radioButtons',
@@ -1287,7 +1287,7 @@ export default {
     gear: 'Jacket'
   },
 
-  thermalLinerPocket: {
+  THERMAL_LINER_POCKET: {
     label: 'Thermal Liner Pocket',
     attribute: 'THERMAL LINER POCKET',
     type: 'radioButtons',
@@ -1304,7 +1304,7 @@ export default {
     gear: 'Jacket'
   },
 
-  linerAttachmentShell: {
+  LINER_ATTACHMENT_SHELL: {
     label: 'Liner Attachment (Shell)',
     attribute: 'LINER ATTACHMENT (SHELL)',
     type: 'radioButtons',
@@ -1321,7 +1321,7 @@ export default {
     gear: 'Jacket'
   },
 
-  linerAttachmentLiner: {
+  LINER_ATTACHMENT_LINER: {
     label: 'Liner Attachment (Liner)',
     attribute: 'LINER ATTACHMENT (LINER)',
     type: 'radioButtons',
@@ -1338,7 +1338,7 @@ export default {
     gear: 'Jacket'
   },
 
-  drdStrap: {
+  DRD_STRAP: {
     label: 'Drd Strap',
     attribute: 'DRD STRAP',
     type: 'radioButtons',
@@ -1355,7 +1355,7 @@ export default {
     gear: 'Jacket'
   },
 
-  deletePiping: {
+  DELETE_PIPING: {
     label: 'Piping',
     attribute: 'PIPING',
     type: 'radioButtons',
@@ -1477,9 +1477,9 @@ export default {
     gear: 'Pants'
   },
 
-  /*************** SIDE POCKETS RIGHT **********************/  
+  /*************** SIDE POCKETS RIGHT **********************/
   PANT_SIDE_POCKETS_RIGHT_SIZE_TYPE: {
-    label: 'SIZE & TYPE',
+    label: 'SIZE AND TYPE',
     attribute: 'PANT_SIDE_POCKETS_RIGHT_SIZE_TYPE',
     type: 'radioButtons',
     data: 'tk-platform',
@@ -1523,6 +1523,7 @@ export default {
     },
     gear: 'Pants'
   },
+
   PANT_SIDE_POCKETS_RIGHT_OUTSITE_REINFORCEMENT: {
     label: 'OUTSIDE REINFORCEMENT',
     attribute: 'PANT_SIDE_POCKETS_RIGHT_OUTSITE_REINFORCEMENT',
@@ -1549,6 +1550,7 @@ export default {
     },
     gear: 'Pants'
   },
+
   PANT_SIDE_POCKETS_RIGHT_POCKET_DIVIDER: {
     label: 'POCKET DIVIDER',
     attribute: 'PANT_SIDE_POCKETS_RIGHT_POCKET_DIVIDER',
@@ -1602,7 +1604,7 @@ export default {
   },
 
   PANT_SIDE_POCKETS_LEFT_SIZE_TYPE: {
-    label: 'SIZE & TYPE',
+    label: 'SIZE AND TYPE',
     attribute: 'PANT_SIDE_POCKETS_LEFT_SIZE_TYPE',
     type: 'radioButtons',
     data: 'tk-platform',

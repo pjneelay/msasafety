@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import {
   handleAddToCart,
   handleInputSelect,
-} from '../../config/eventListeners';
+} from '../../Athletixconfig/eventListeners';
 import toolkit from '../toolkit';
 
 const TemplateContainer = ({

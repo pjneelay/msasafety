@@ -32,7 +32,7 @@ const RadioButtonsImages = ({ options, value, onChange }) => {
     <Wrapper>
       <ButtonsRow>
         {options.map(({ label, img, value: val }, i) => (
-         <div>
+         <div key={label+i}>
            {((val === 'Pants') || (val === 'Jacket') || (val === 'Athletix') )  ? 
            <ButtonGearWrapper
             key={i}

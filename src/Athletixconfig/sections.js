@@ -11,19 +11,19 @@ export default [
           },
           {
             label: 'MATERIALS',
-            inputs: ['outerShell'],
+            inputs: ['OUTER_SHELL'],
           },
           {
             label: 'COLOR',
-            inputs: ['color'],
+            inputs: ['COLOR'],
           },
           {
             label: 'THERMAL LINER',
-            inputs: ['thermalLiner'],
+            inputs: ['THERMAL_LINER'],
           },
           {
             label: 'MOISTURE BARRIER',
-            inputs: ['moistureBarrier'],
+            inputs: ['MOISTURE_BARRIER'],
           },
         ],
       },
@@ -59,7 +59,7 @@ export default [
         sections: [
           {
             label: 'SIDE POCKETS',
-            inputs: ['sizeAndType', 'outsideReinforcement', 'insideReinforcement', 'pullTab', 'rightSidePocketDivider', 'leftSidePocketDivider'],
+            inputs: ['SIZE_AND_TYPE', 'OUTSIDE_REINFORCEMENTS', 'INSIDE_REINFORCEMENTS', 'PULL_TAB', 'RIGHT_SIDE_POCKET_DIVIDER', 'LEFT_SIDE_POCKET_DIVIDER'],
           },
         ],
       },
@@ -68,7 +68,7 @@ export default [
         sections: [
           {
             label: 'COLLAR OPTIONS',
-            inputs: ['rightTopCollar','leftTopCollar'],
+            inputs: ['RIGHT_TOP_COLLAR','LEFT_TOP_COLLAR'],
           }
         ]
       },
@@ -77,7 +77,7 @@ export default [
         sections: [
           {
             label: 'NEXT TO STORMFLAP',
-            inputs: ['rightChestSFPockets','rightChestSFTrimOverPocket','rightChestSFAntennaNotch', 'rightChestSFMic','rightChestSFHoldersStormFlap'],
+            inputs: ['RIGHT_RIGHT_CHESTSF_POCKETS','RIGHT_CHESTSF_TRIM_OVER_POCKET','RIGHT_CHESTSF_ANTENNA_NOTCH', 'RIGHT_CHESTSF_MIC','RIGHT_CHESTSF_HOLDERS_STORMFLAP'],
           },
           // {
           //   label: 'TWD SLEEVE',
@@ -90,7 +90,7 @@ export default [
         sections: [
           {
             label: 'NEXT TO STORMFLAP',
-            inputs: ['leftChestSFPockets','leftChestSFTrimOverPocket','leftChestSFAntennaNotch', 'leftChestSFMic', 'leftChestSFHoldersStormFlap'],
+            inputs: ['LEFT_CHESTSF_POCKETS','LEFT_CHESTSF_TRIM_OVER_POCKET','LEFT_CHESTSF_ANTENNA_NOTCH', 'LEFT_CHESTSF_MIC', 'LEFT_CHESTSF_HOLDERS_STORMFLAP'],
           },
           // {
           //   label: 'TWD SLEEVE',
@@ -103,11 +103,11 @@ export default [
         sections: [
           {
             label: 'FLAG / CUSTOM PRINTED PATCH',
-            inputs: ['rightFlags', 'rightEmbroidery']
+            inputs: ['RIGHT_FLAGS', 'RIGHT_EMBROIDERY']
           },
           {
             label: 'CUSTOM PRINTED PATCH PADDING',
-            inputs: ['rightEmbroideryPadding'],
+            inputs: ['RIGHT_EMBROIDERY_PADDING'],
             cssClass: ['right-patch-padding']
           }
         ],
@@ -117,11 +117,11 @@ export default [
         sections: [
           {
             label: 'FLAG / CUSTOM PRINTED PATCH',
-            inputs: ['leftFlags', 'leftEmbroidery']
+            inputs: ['LEFT_FLAGS', 'LEFT_EMBROIDERY']
           },
           {
             label: 'CUSTOM PRINTED PATCH PADDING',
-            inputs: ['leftEmbroideryPadding'],
+            inputs: ['LEFT_EMBROIDERY_PADDING'],
             cssClass: ['left-patch-padding']
           }
         ],
@@ -131,7 +131,7 @@ export default [
         sections: [
           {
             label: 'Other Feature (Next to Stormflap)',
-            inputs: ['rightFrontNextSFHolders'],
+            inputs: ['RIGHT_FRONT_NEXTSF_HOLDERS'],
           },
           // {
           //   label: 'Other Feature (Nehind Base Pocket)',
@@ -144,7 +144,7 @@ export default [
         sections: [
           {
             label: 'Other Feature (Next to Stormflap)',
-            inputs: ['leftFrontNextSFHolders'],
+            inputs: ['LEFT_FRONT_NEXTSF_HOLDERS'],
           },
           // {
           //   label: 'Other Feature (Nehind Base Pocket)',
@@ -157,35 +157,35 @@ export default [
         sections: [
           {
             label: 'Row A Lettering',
-            inputs: ['lettersAText', 'letterASize','lettersAColor'],
+            inputs: ['LETTERS_A_TEXT', 'LETTER_A_SIZE','LETTERS_A_COLOR'],
           },
           {
             label: 'Row B Lettering',
-            inputs: ['lettersBText', 'letterBSize','lettersBColor'],
+            inputs: ['LETTERS_B_TEXT', 'LETTER_B_SIZE','LETTERS_B_COLOR'],
           },
           {
             label: 'Row C Lettering',
-            inputs: ['lettersCText', 'letterCSize','lettersCColor'],
+            inputs: ['LETTERS_C_TEXT', 'LETTER_C_SIZE','LETTERS_C_COLOR'],
           },
           {
             label: 'Row D Lettering (NOT AVAILABLE)',
-            inputs: ['lettersDText'],
+            inputs: ['LETTERS_D_TEXT'],
           },
           {
             label: 'Row E Lettering',
-            inputs: ['lettersEText', 'letterESize','lettersEColor'],
+            inputs: ['LETTERS_E_TEXT', 'LETTER_E_SIZE','LETTERS_E_COLOR'],
           },
           {
             label: 'Row F Lettering',
-            inputs: ['lettersFText', 'letterFSize','lettersFColor'],
+            inputs: ['LETTERS_F_TEXT', 'LETTER_F_SIZE','LETTERS_F_COLOR'],
           },
           {
             label: 'Hanging Letter Patch',
-            inputs: ['letterPatch'],
+            inputs: ['LETTER_PATCH'],
           },
           {
             label: 'Hanging Letter Patch Lettering ',
-            inputs: ['lettersText','letterSize','lettersColor'],
+            inputs: ['LETTERS_TEXT','LETTER_G_SIZE','LETTERS_COLOR'],
           }
         ],
       },
@@ -194,59 +194,59 @@ export default [
         sections: [
           {
             label: 'Sleeve Well Configuration',
-            inputs: ['sleeveWellConfiguration'],
+            inputs: ['SLEEVE_WELL'],
           },
           {
             label: 'Wrister (Liner)',
-            inputs: ['wristerLiner'],
+            inputs: ['WRISTER_LINER'],
           },
           {
             label: 'Wrister (Liner) Thumb Hole Loop',
-            inputs: ['wristerLinerThumbHoleLoop'],
+            inputs: ['WRISTER_LINER_THUMB_HOLE_LOOP'],
           },
           {
             label: 'Sleeve Cuffs',
-            inputs: ['sleeveCuffs'],
+            inputs: ['SLEEVE_CUFFS'],
           },
           {
             label: 'Shoulder Padding',
-            inputs: ['shoulderPadding'],
+            inputs: ['SHOULDER_PADDING'],
           },
           {
             label: 'Globeguard',
-            inputs: ['globeguard'],
+            inputs: ['GLOBE_GUARD'],
           },
           {
             label: 'Neck Hanger Loop',
-            inputs: ['neckHangerLoop'],
+            inputs: ['NECK_HANGER_LOOP'],
           },
           {
             label: 'Hem Snap Tabs (Shell)',
-            inputs: ['hemSnapTabsSell'],
+            inputs: ['HEM_SNAP_TABS_SELL'],
           },
           {
             label: 'Hem Snap Tabs (Liner)',
-            inputs: ['hemSnapTabsLiner'],
+            inputs: ['HEM_SNAP_TABS_LINER'],
           },
           {
             label: 'Thermal Liner Pocket',
-            inputs: ['thermalLinerPocket'],
+            inputs: ['THERMAL_LINER_POCKET'],
           },
           {
             label: 'Liner Attachment (Shell)',
-            inputs: ['linerAttachmentShell'],
+            inputs: ['LINER_ATTACHMENT_SHELL'],
           },
           {
             label: 'Liner Attachment (Liner)',
-            inputs: ['linerAttachmentLiner'],
+            inputs: ['LINER_ATTACHMENT_LINER'],
           },
           {
             label: 'DRD STRAP',
-            inputs: ['drdStrap'],
+            inputs: ['DRD_STRAP'],
           },
           {
             label: 'PIPING',
-            inputs: ['deletePiping'],
+            inputs: ['DELETE_PIPING'],
           }
         ],
       },
