@@ -74,12 +74,15 @@ export default {
     selected: true,
     optionNumber: {
       'Titanium™ with Nomex Nano': 'N3',
+      'Caldura Elite Nomex Nano':'N2',
     },
     optionGroup: {
       'Titanium™ with Nomex Nano': 'NA',
+      'Caldura Elite Nomex Nano':'NA',
     },
     optionType: {
       'Titanium™ with Nomex Nano': 'NA',
+      'Caldura Elite Nomex Nano':'NA',
     },
     gear: 'athletix'
   },
@@ -345,7 +348,7 @@ export default {
   },
 
   SIZE_AND_TYPE: {
-    label: 'SIZE AND TYPE',
+    label: 'Size and Type',
     attribute: 'SIZE AND TYPE',
     type: 'radioButtons',
     data: 'tk-platform',
@@ -1137,7 +1140,7 @@ export default {
   },
 
   WRISTER_LINER: {
-    label: 'WRISTER_LINER',
+    label: 'Wrister Liner',
     attribute: 'WRISTER (LINER)',
     type: 'radioButtons',
     data: 'tk-platform',
@@ -1381,7 +1384,7 @@ export default {
 
   /*************** FRONT ****************************/
   PANT_FRONT_FRONTCLOSURE_CLOSURE: {
-    label: 'CLOSURE',
+    label: 'Closure',
     attribute: 'PANT_FRONT_FRONTCLOSURE_CLOSURE',
     type: 'radioButtons',
     data: 'tk-platform',
@@ -1398,7 +1401,7 @@ export default {
   },
 
   PANT_FRONT_FRONTCLOSURE_BELT_LOOPS: {
-    label: 'BELT LOOPS',
+    label: 'Belt Loops',
     attribute: 'PANT_FRONT_FRONTCLOSURE_BELT_LOOPS',
     type: 'radioButtons',
     data: 'tk-platform',
@@ -1415,7 +1418,7 @@ export default {
   },
 
   PANT_FRONT_FRONTCLOSURE_BELT: {
-    label: 'BELT',
+    label: 'Belt',
     attribute: 'PANT_FRONT_FRONTCLOSURE_BELT',
     type: 'radioButtons',
     data: 'tk-platform',
@@ -1441,7 +1444,7 @@ export default {
   },
 
   PANT_FRONT_FRONTCLOSURE_CARABINER: {
-    label: 'CARABINER',
+    label: 'Carabiner',
     attribute: 'PANT_FRONT_FRONTCLOSURE_CARABINER',
     type: 'radioButtons',
     data: 'tk-platform',
@@ -1461,7 +1464,7 @@ export default {
   },
 
   PANT_FRONT_FRONTCLOSURE_RAPPELLING: {
-    label: 'RAPPELLING LOOPS',
+    label: 'Rappelling Loops',
     attribute: 'PANT_FRONT_FRONTCLOSURE_RAPPELLING LOOPS',
     type: 'radioButtons',
     data: 'tk-platform',
@@ -1479,7 +1482,7 @@ export default {
 
   /*************** SIDE POCKETS RIGHT **********************/
   PANT_SIDE_POCKETS_RIGHT_SIZE_TYPE: {
-    label: 'SIZE AND TYPE',
+    label: 'Size and Type',
     attribute: 'PANT_SIDE_POCKETS_RIGHT_SIZE_TYPE',
     type: 'radioButtons',
     data: 'tk-platform',
@@ -1502,7 +1505,7 @@ export default {
   },
 
   PANT_SIDE_POCKETS_RIGHT_INSIDE_REINFORCEMENT: {
-    label: 'INSIDE REINFORCEMENT',
+    label: 'Inside Reinforcement',
     attribute: 'PANT_SIDE_POCKETS_RIGHT_INSIDE_REINFORCEMENT',
     type: 'radioButtons',
     data: 'tk-platform',
@@ -1525,7 +1528,7 @@ export default {
   },
 
   PANT_SIDE_POCKETS_RIGHT_OUTSITE_REINFORCEMENT: {
-    label: 'OUTSIDE REINFORCEMENT',
+    label: 'Outside Reinforcement',
     attribute: 'PANT_SIDE_POCKETS_RIGHT_OUTSITE_REINFORCEMENT',
     type: 'radioButtons',
     data: 'tk-platform',
@@ -1535,7 +1538,7 @@ export default {
   },
 
   PANT_SIDE_POCKETS_RIGHT_PULL_TAB: {
-    label: 'PULL TAB',
+    label: 'Pull Tab',
     attribute: 'PANT_SIDE_POCKETS_RIGHT_PULL_TAB',
     type: 'radioButtons',
     data: 'tk-platform',
@@ -1552,7 +1555,7 @@ export default {
   },
 
   PANT_SIDE_POCKETS_RIGHT_POCKET_DIVIDER: {
-    label: 'POCKET DIVIDER',
+    label: 'Pocket Divider',
     attribute: 'PANT_SIDE_POCKETS_RIGHT_POCKET_DIVIDER',
     type: 'radioButtons',
     data: 'tk-platform',
@@ -1569,7 +1572,7 @@ export default {
   },
 
   PANT_SIDE_POCKETS_RIGHT_TOOL_COMPARTMENT: {
-    label: 'TOOL COMPARTMENT',
+    label: 'Tool Compartment',
     attribute: 'PANT_SIDE_POCKETS_RIGHT_TOOL_COMPARTMENT',
     type: 'radioButtons',
     data: 'tk-platform',
@@ -1587,7 +1590,7 @@ export default {
 
   /*************** SIDE POCKETS LEFT **********************/
   PANT_SIDE_POCKETS_LEFT_OUTSIDE_REINFORCEMENT: {
-    label: 'OUTSIDE REINFORCEMENT',
+    label: 'Outside Reinforcement',
     attribute: 'PANT_SIDE_POCKETS_LEFT_OUTSIDE_REINFORCEMENT',
     type: 'radioButtons',
     data: 'tk-platform',
@@ -1604,7 +1607,7 @@ export default {
   },
 
   PANT_SIDE_POCKETS_LEFT_SIZE_TYPE: {
-    label: 'SIZE AND TYPE',
+    label: 'Size and Type',
     attribute: 'PANT_SIDE_POCKETS_LEFT_SIZE_TYPE',
     type: 'radioButtons',
     data: 'tk-platform',
@@ -1627,7 +1630,7 @@ export default {
   },
 
   PANT_SIDE_POCKETS_LEFT_OUTSITE_REINFORCEMENT: {
-    label: 'OUTSIDE REINFORCEMENT',
+    label: 'Outside Reinforcement',
     attribute: 'PANT_SIDE_POCKETS_RIGHT_OUTSITE_REINFORCEMENT',
     type: 'radioButtons',
     data: 'tk-platform',
@@ -1645,7 +1648,7 @@ export default {
   },
 
   PANT_SIDE_POCKETS_LEFT_INSIDE_REINFORCEMENT: {
-    label: 'INSIDE REINFORCEMENT',
+    label: 'Inside Reinforcement',
     attribute: 'PANT_SIDE_POCKETS_LEFT_INSIDE_REINFORCEMENT',
     type: 'radioButtons',
     data: 'tk-platform',
@@ -1668,7 +1671,7 @@ export default {
   },
 
   PANT_SIDE_POCKETS_LEFT_PULL_TAB: {
-    label: 'PULL TAB',
+    label: 'Pull Tab',
     attribute: 'PANT_SIDE_POCKETS_LEFT_PULL_TAB',
     type: 'radioButtons',
     data: 'tk-platform',
@@ -1685,7 +1688,7 @@ export default {
   },
 
   PANT_SIDE_POCKETS_LEFT_POCKET_DIVIDER: {
-    label: 'POCKET DIVIDER',
+    label: 'Pocket Divider',
     attribute: 'PANT_SIDE_POCKETS_LEFT_POCKET_DIVIDER',
     type: 'radioButtons',
     data: 'tk-platform',
@@ -1702,7 +1705,7 @@ export default {
   },
 
   PANT_SIDE_POCKETS_LEFT_TOOL_COMPARTMENT: {
-    label: 'TOOL COMPARTMENT',
+    label: 'Tool Compartment',
     attribute: 'PANT_SIDE_POCKETS_LEFT_TOOL_COMPARTMENT',
     type: 'radioButtons',
     data: 'tk-platform',
