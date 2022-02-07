@@ -314,7 +314,6 @@ const AccordionTemplate2 = ({
   
   // newConfiguration.sort(((a, b) => a.sortValue - b.sortValue));
   newConfiguration.sort(((a, b) => a.sortByGear - b.sortByGear));
-  console.log("data",newConfiguration);
   letteringConfiguration.sort(((a, b) => a.sortValue - b.sortValue));
   let secondaryOptions;
   // newConfiguration.sort(((a, b) => a.gear - b.gear));

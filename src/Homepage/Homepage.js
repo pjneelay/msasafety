@@ -16,7 +16,7 @@ const Homepage = () => {
             <div className='menu'>
                    
                     <div className='menuoption'>
-                        <Link to="/">
+                        <Link to="/gxtreme">
                             <div style={{height:'30rem',backgroundColor:'white'}}>
                                 <img style={{padding:'37px'}} src={jacket}/>
                             </div>

@@ -176,9 +176,9 @@ export default {
     selected: true,
     cssClass: 'active',
     optionNumber: {
-      'NYC': '',
-      'NFPA B':'',
-      'NFPA VERT':'',
+      'NYC': '17(T)703',
+      'NFPA B':'17(T)783',
+      'NFPA VERT':'17(T)753',
     },
     optionGroup: {
       'NYC': 'NA',
@@ -221,9 +221,9 @@ export default {
     data: 'tk-platform',
     cssClass: 'active',
     optionNumber: {
-      'Triple Trim':'',
-      'Comfort Trim':'',
-      'Brilliance w/Stripe':''
+      'Triple Trim':'Triple Trim',
+      'Comfort Trim':'Comfort Trim',
+      'Brilliance w/Stripe':'Brilliance w/Stripe'
     },
     optionGroup: {
       'Triple Trim':'NA',
@@ -246,7 +246,7 @@ export default {
     selected: true,
     cssClass: 'active',
     optionNumber: {
-      '3" AROUND CUFFS': '27C03',
+      '3" AROUND CUFFS': '27(T)03',
     },
     optionGroup: {
       '3" AROUND CUFFS': 'NA',
@@ -285,9 +285,9 @@ export default {
     data: 'tk-platform',
     cssClass: 'active',
     optionNumber: {
-      'Triple Trim':'',
-      'Comfort Trim':'',
-      'Brilliance w/Stripe':''
+      'Triple Trim':'Triple Trim',
+      'Comfort Trim':'Comfort Trim',
+      'Brilliance w/Stripe':'Brilliance w/Stripe'
     },
     optionGroup: {
       'Triple Trim':'NA',
@@ -313,8 +313,8 @@ export default {
     data: 'tk-platform',
     optionNumber: {
       'VISLON ZIP IN-VLC OUT': 'N1STCL03',
-      'HK/D IN VLC OUT GX3':'',
-      'TC VISZIP IN VLCOUT':'',
+      'HK/D IN VLC OUT GX3':'19(XX)307',
+      'TC VISZIP IN VLCOUT':'19(XX)T269',
     },
     optionGroup: {
       'VISLON ZIP IN-VLC OUT': 'CLOS',
@@ -356,9 +356,9 @@ export default {
     data: 'tk-platform',
     optionNumber: {
       'NONE':'',
-      'HANG STRAP WITH D-RING ': '1942590S',
-      'HELMET SNAP W/SLF STRAP': 'N142190S',
-      'MICROPHONE STRAP 1X3': '1942564S',
+      'HANG STRAP WITH D-RING ': '19(XX)590S',
+      'HELMET SNAP W/SLF STRAP': 'N1(XX)190S',
+      'MICROPHONE STRAP 1X3': '19(XX)564S',
     },
     optionGroup: {
       'NONE':'NA',
@@ -382,7 +382,7 @@ export default {
     data: 'tk-platform',
     optionNumber: {
       'NONE':'NA',
-      'MICROPHONE STRAP 1X3': '1942564S',
+      'MICROPHONE STRAP 1X3': '19(XX)564S',
     },
     optionGroup: {
       'NONE':'NA',
@@ -394,7 +394,7 @@ export default {
     },
     gear: 'Jacket'
   },
-
+/***********************JACKET SIDE POCLETS (LEFT & RIGHT)************************* */
   SIZE_AND_TYPE: {
     label: 'SIZE AND TYPE',
     attribute: 'SIZE AND TYPE',
@@ -438,7 +438,7 @@ export default {
     type: 'radioButtons',
     data: 'tk-platform',
     optionNumber: {
-      'KEV POUCH HANDWARMER 2X8X8': 'N1STPRA1',
+      'KEV POUCH HANDWARMER 2X8X8': 'N1STPR01',
     },
     optionGroup: {
       'KEV POUCH HANDWARMER 2X8X8': 'REINFORCEMENT',
@@ -448,7 +448,7 @@ export default {
     },
     gear: 'Jacket'
   },
-  
+  /*********************COLLAR************************* */
   RIGHT_TOP_COLLAR: {
     label: 'Right Top Collar',
     attribute: 'RIGHT TOP COLLAR',
@@ -456,7 +456,7 @@ export default {
     data: 'tk-platform',
     optionNumber: {
       'NONE':'',
-      'MICROPHONE STRAP 1X3': '1942564C',
+      'MICROPHONE STRAP 1X3': '19(XX)564C',
     },
     optionGroup: {
       'NONE':'',
@@ -475,7 +475,7 @@ export default {
     type: 'radioButtons',
     data: 'tk-platform',
     optionNumber: {
-      'MICROPHONE STRAP 1X3': '1942564C',
+      'MICROPHONE STRAP 1X3': '19(XX)564C',
     },
     optionGroup: {
       'MICROPHONE STRAP 1X3': 'HOLDER',
@@ -485,7 +485,7 @@ export default {
     },
     gear: 'Jacket'
   },
-
+/*********************CHEST***************************** */
   RIGHT_CHESTSF_POCKETS: {
     label: 'Pockets',
     attribute: 'RIGHT POCKETS',
@@ -493,9 +493,9 @@ export default {
     data: 'tk-platform',
     optionNumber: {
       'NONE':'',
-      'RADIO POCKET 3X3.5X9': '1942413B',
-      'RADIO POCKET 2X3.5X8': '1942413C',
-      'RADIO POCKET 3X2.5X7': '1942413D',
+      'RADIO POCKET 3X3.5X9': '19(XX)413B',
+      'RADIO POCKET 2X3.5X8': '19(XX)413C',
+      'RADIO POCKET 3X2.5X7': '19(XX)413D',
     },
     optionGroup: {
       'NONE':'',
@@ -519,7 +519,7 @@ export default {
     data: 'tk-platform',
     optionNumber: {
       'NONE':'',
-      'MICROPHONE STRAP 1X3': '1942564'
+      'MICROPHONE STRAP 1X3': '19(XX)564'
     },
     optionGroup: {
       'NONE':'',
@@ -539,14 +539,14 @@ export default {
     data: 'tk-platform',
     optionNumber: {
       'NONE':'',
-      'HANGING STRAP WITH D-RING': '1942590H',
-      'STRAP 1X12 W/1X4 VELCRO': 'N142109',
-      'HELMET SNAP W/SLF &VLC STRAP': 'N142187',
-      'SELF HSNP/MIC/2.5X9': 'N142267',
-      'FLASHLIGHT STRAP 2.5X9 WITH VELCRO': 'N142298',
-      'HELMET SNAP W/SLF STRAP': 'N142190',
-      'SURVIVOR STRAP': '1942548',
-      'SUNLANCE W/SLF HELMET SNAP ABOVE': '1942546C',
+      'HANGING STRAP WITH D-RING': '19(XX)590H',
+      'STRAP 1X12 W/1X4 VELCRO': 'N1(XX)109',
+      'HELMET SNAP W/SLF &VLC STRAP': 'N1(XX)187',
+      'SELF HSNP/MIC/2.5X9': 'N1(XX)187',
+      'FLASHLIGHT STRAP 2.5X9 WITH VELCRO': 'N1(XX)298',
+      'HELMET SNAP W/SLF STRAP': 'N1(XX)190S',
+      'SURVIVOR STRAP': '19(XX)548',
+      'SUNLANCE W/SLF HELMET SNAP ABOVE': '19(XX)546C',
     },
     optionGroup: {
       'NONE':'',
@@ -580,8 +580,8 @@ export default {
     data: 'tk-platform',
     optionNumber: {
       'NONE':'',
-      'RADIO FLAP DUAL NOTCH TAB 3': 'N142505',
-      'RADIO FLAP NOTCH TAB 3': 'N1425035',
+      'RADIO FLAP DUAL NOTCH TAB 3': 'N1(XX)505',
+      'RADIO FLAP NOTCH TAB 3': 'N1(XX)5035',
     },
     optionGroup: {
       'NONE':'',
@@ -603,9 +603,9 @@ export default {
     data: 'tk-platform',
     optionNumber: {
       'NONE':'',
-      'RADIO POCKET 3X3.5X9': '1942413B',
-      'RADIO POCKET 2X3.5X8': '1942413C',
-      'RADIO POCKET 3X2.5X7': '1942413D',
+      'RADIO POCKET 3X3.5X9': '19(XX)413B',
+      'RADIO POCKET 2X3.5X8': '19(XX)413C',
+      'RADIO POCKET 3X2.5X7': '19(XX)413D',
     },
     optionGroup: {
       'NONE':'',
@@ -629,7 +629,7 @@ export default {
     data: 'tk-platform',
     optionNumber: {
       'NONE':'',
-      'MICROPHONE STRAP 1X3': '1942564'
+      'MICROPHONE STRAP 1X3': '19(XX)564'
     },
     optionGroup: {
       'NONE':'',
@@ -649,8 +649,8 @@ export default {
     data: 'tk-platform',
     optionNumber: {
       'NONE':'',
-      'RADIO FLAP DUAL NOTCH TAB 3': 'N142505',
-      'RADIO FLAP NOTCH TAB 3': 'N1425035',
+      'RADIO FLAP DUAL NOTCH TAB 3': 'N1(XX)505',
+      'RADIO FLAP NOTCH TAB 3': 'N1(XX)5035',
     },
     optionGroup: {
       'NONE':'',
@@ -672,14 +672,14 @@ export default {
     data: 'tk-platform',
     optionNumber: {
       'NONE':'',
-      'HANGING STRAP WITH D-RING': '1942590H',
-      'STRAP 1X12 W/1X4 VELCRO': 'N142109',
-      'HELMET SNAP W/SLF &VLC STRAP': 'N142187',
-      'SELF HSNP/MIC/2.5X9': 'N142267',
-      'FLASHLIGHT STRAP 2.5X9 WITH VELCRO': 'N142298',
-      'HELMET SNAP W/SLF STRAP': 'N142190',
-      'SURVIVOR STRAP': '1942548',
-      'SUNLANCE W/SLF HELMET SNAP ABOVE': '1942546C',
+      'HANGING STRAP WITH D-RING': '19(XX)590H',
+      'STRAP 1X12 W/1X4 VELCRO': 'N1(XX)109',
+      'HELMET SNAP W/SLF &VLC STRAP': 'N1(XX)187',
+      'SELF HSNP/MIC/2.5X9': 'N1(XX)267',
+      'FLASHLIGHT STRAP 2.5X9 WITH VELCRO': 'N1(XX)298',
+      'HELMET SNAP W/SLF STRAP': 'N1(XX)190S',
+      'SURVIVOR STRAP': '19(XX)548',
+      'SUNLANCE W/SLF HELMET SNAP ABOVE': '19(XX)546C',
     },
     optionGroup: {
       'NONE':'',
@@ -705,7 +705,53 @@ export default {
     },
     gear: 'Jacket'
   },
+/**************FRONT*************** */
+  RIGHT_FRONT_NEXTSF_HOLDERS: {
+    label: 'Holders',
+    attribute: 'RIGHT FRONT NEXT TO STORMFLAP',
+    type: 'radioButtons',
+    data: 'tk-platform',
+    optionNumber: {
+      'HELMET SNAP W/SLF STRAP': 'N1(XX)190',
+      'HANGING STRAP WITH D-RING': '19(XX)590H',
+      'NONE':''
+    },
+    optionGroup: {
+      'HELMET SNAP W/SLF STRAP': 'HOLDER',
+      'HANGING STRAP WITH D-RING': 'HOLDER',
+      'NONE':''
+    },
+    optionType: {
+      'HELMET SNAP W/SLF STRAP': 'HELMET SNAP',
+      'HANGING STRAP WITH D-RING': 'D-RING',
+      'NONE':''
+    },
+    gear: 'Jacket'
+  },
 
+  LEFT_FRONT_NEXTSF_HOLDERS: {
+    label: 'holders',
+    attribute: 'LEFT FRONT NEXT TO STORMFLAP',
+    type: 'radioButtons',
+    data: 'tk-platform',
+    optionNumber: {
+      'HELMET SNAP W/SLF STRAP': 'N1(XX)190',
+      'HANGING STRAP WITH D-RING': '19(XX)590H',
+      'NONE':''
+    },
+    optionGroup: {
+      'HELMET SNAP W/SLF STRAP': 'HOLDER',
+      'HANGING STRAP WITH D-RING': 'HOLDER',
+      'NONE':''
+    },
+    optionType: {
+      'HELMET SNAP W/SLF STRAP': 'HELMET SNAP',
+      'HANGING STRAP WITH D-RING': 'D-RING',
+      'NONE':''
+    },
+    gear: 'Jacket'
+  },
+/************SLEEVES*********** */
   RIGHT_FLAGS: {
     label: 'FLAGS',
     attribute: 'RIGHT FLAGS',
@@ -713,17 +759,17 @@ export default {
     data: 'tk-platform',
     optionNumber: {
      'U.S. FLAG EMBROIDERY RIGHT SLEEVE': 'N100107E',
-     'CANADIAN FLAG EMBROIDERY RIGHT SLEEVE':'',
+     'CANADIAN FLAG EMBROIDERY RIGHT SLEEVE':'N100107F',
      'NONE':''
     },
     optionGroup: {
      'U.S. FLAG EMBROIDERY RIGHT SLEEVE': 'MISCELLANEOUS',
-     'CANADIAN FLAG EMBROIDERY RIGHT SLEEVE':'',
+     'CANADIAN FLAG EMBROIDERY RIGHT SLEEVE':'MISCELLANEOUS',
      'NONE':''
     },
     optionType: {
      'U.S. FLAG EMBROIDERY RIGHT SLEEVE': 'FLAG',
-     'CANADIAN FLAG EMBROIDERY RIGHT SLEEVE':'',
+     'CANADIAN FLAG EMBROIDERY RIGHT SLEEVE':'FLAG',
      'NONE':''
     },
     gear: 'Jacket'
@@ -757,9 +803,9 @@ export default {
     optionNumber: {
       'NONE':'',
      'CUSTOM SILVER PRINT PATCH SLEEVE': 'CPPS',
-     'CUSTOM BLACK PRINT PATCH SLEEVE': 'CPPS',
-     'CUSTOM GOLD PRINT PATCH SLEEVE': 'CPPS',
-     'CUSTOM YELLOW PRINT PATCH SLEEVE': 'CPPS'
+     'CUSTOM BLACK PRINT PATCH SLEEVE': 'CPPSBLK',
+     'CUSTOM GOLD PRINT PATCH SLEEVE': 'CPPSGLD',
+     'CUSTOM YELLOW PRINT PATCH SLEEVE': 'CPPSYEL'
     },
     optionGroup: {
       'NONE':'',
@@ -786,9 +832,9 @@ export default {
     optionNumber: {
       'NONE':'',
      'CUSTOM SILVER PRINT PATCH SLEEVE': 'CPPS',
-     'CUSTOM BLACK PRINT PATCH SLEEVE': 'CPPS',
-     'CUSTOM GOLD PRINT PATCH SLEEVE': 'CPPS',
-     'CUSTOM YELLOW PRINT PATCH SLEEVE': 'CPPS'
+     'CUSTOM BLACK PRINT PATCH SLEEVE': 'CPPSBLK',
+     'CUSTOM GOLD PRINT PATCH SLEEVE': 'CPPSGLD',
+     'CUSTOM YELLOW PRINT PATCH SLEEVE': 'CPPSYEL'
     },
     optionGroup: {
       'NONE':'',
@@ -814,18 +860,18 @@ export default {
     type: 'radioButtons',
     data: 'tk-platform',
     optionNumber: {
-     'U.S. FLAG EMBROIDERY LEFT SLEEVE': 'N100107L',
-     'CANADIAN FLAG EMBROIDERY LEFT SLEEVE':'',
+     'U.S. FLAG EMBROIDERY LEFT SLEEVE': 'N100107E',
+     'CANADIAN FLAG EMBROIDERY LEFT SLEEVE':'N100107F',
      'NONE':''
     },
     optionGroup: {
      'U.S. FLAG EMBROIDERY LEFT SLEEVE': 'MISCELLANEOUS',
-     'CANADIAN FLAG EMBROIDERY LEFT SLEEVE':'',
+     'CANADIAN FLAG EMBROIDERY LEFT SLEEVE':'MISCELLANEOUS',
      'NONE':''
     },
     optionType: {
      'U.S. FLAG EMBROIDERY LEFT SLEEVE': 'FLAG',
-     'CANADIAN FLAG EMBROIDERY LEFT SLEEVE':'',
+     'CANADIAN FLAG EMBROIDERY LEFT SLEEVE':'FLAG',
      'NONE':''
     },
     gear: 'Jacket'
@@ -838,7 +884,7 @@ export default {
     data: 'tk-platform',
     optionNumber: {
       'NONE':'',
-      'LSLV CPPS': '1975L615',
+      'LSLV CPPS': '1975R615',
     },
     optionGroup: {
       'NONE':'',
@@ -851,7 +897,7 @@ export default {
     gear: 'Jacket'
   },
 
-  /* LETTERING */
+  /* *************LETTERING******************** */
   LETTERS_A_TEXT: {
     label: 'A Letters Text',
     attribute: 'Row A Lettering Input',
@@ -985,7 +1031,7 @@ export default {
     type: 'radioButtons',
     data: 'tk-platform',
     optionNumber: {
-      'LETTER PATCH SNP/VLC HANG 5X20': 'N142132',
+      'LETTER PATCH SNP/VLC HANG 5X20': 'N1(XX)132',
     },
     optionGroup: {
       'LETTER PATCH SNP/VLC HANG 5X20': 'PATCH',
@@ -1022,8 +1068,8 @@ export default {
     type: 'RadioButtonsImages',
     data: 'tk-platform',
     optionNumber: {
-      'Lime/Yellow': 'NA',
-      'Red/Orange': 'NA',
+      'Lime/Yellow': 'L/Y',
+      'Red/Orange': 'R/O',
     },
     optionGroup: {
       'Lime/Yellow': 'NA',
@@ -1045,6 +1091,24 @@ export default {
     optionGroup: 'NA',
     optionType: 'NA'
   },
+/***************OTHER********************* */
+
+SLEEVE_WELL: {
+  label: 'Sleeve Well',
+  attribute: 'SLEEVE WELL',
+  type: 'radioButtons',
+  data: 'tk-platform',
+  optionNumber: {
+    'Std Adjust Neop SlvWell': 'N1STSW01',
+  },
+  optionGroup: {
+    'Std Adjust Neop SlvWell': 'SLVW',
+  },
+  optionType: {
+    'Std Adjust Neop SlvWell': 'WRISTER',
+  },
+  gear: 'Jacket'
+},
 
   WRISTER_LINER: {
     label: 'WRISTER_LINER',
@@ -1052,10 +1116,10 @@ export default {
     type: 'radioButtons',
     data: 'tk-platform',
     optionNumber: {
-      'NOMEX WRISTER LINER':'',
-      'NOMEX HAND AND WRIST GUARD LINER':'',
-      'GRY NOMEX WRISTER LINER': 'N1STWLA1',
-      'GRY NOMEX HAND AND WRIST GUARD LINER': '1905G9NL'
+      'NOMEX WRISTER LINER':'N1STWR02',
+      'NOMEX HAND AND WRIST GUARD LINER':'190549NX',
+      'GRY NOMEX WRISTER LINER': '1905G5NX',
+      'GRY NOMEX HAND AND WRIST GUARD LINER': '1905G9NX'
     },
     optionGroup: {
       'NOMEX WRISTER LINER':'',
@@ -1072,15 +1136,35 @@ export default {
     gear: 'Jacket'
   },
 
+  WRISTER_LINER_THUMB_HOLE_LOOP: {
+    label: 'WRISTER_LINER_THUMB_HOLE_LOOP',
+    attribute: 'WRISTER (LINER) THUMB HOLE LOOP',
+    type: 'radioButtons',
+    data: 'tk-platform',
+    optionNumber: {
+      'THUMB HOLE LOOP LINER': 'N100321L',
+      'NONE':''
+    },
+    optionGroup: {
+      'THUMB HOLE LOOP LINER': 'MISCELLANEOUS',
+      'NONE':''
+    },
+    optionType: {
+      'THUMB HOLE LOOP LINER': 'OTHER',
+      'NONE':''
+    },
+    gear: 'Jacket'
+  },
+
   SLEEVE_CUFFS: {
     label: 'Sleeve Cuffs',
     attribute: 'SLEEVE CUFFS',
     type: 'radioButtons',
     data: 'tk-platform',
     optionNumber: {
-      'STD SUEDE CUFFS':'',
-      'CUFF REINFORCEMENT DRAGONHIDE': 'N1STCRA1',
-      'CUFF REINFORCEMENT ARASHIELD': '1988507'
+      'STD SUEDE CUFFS':'N1STCR01',
+      'CUFF REINFORCEMENT DRAGONHIDE': '19DH506',
+      'CUFF REINFORCEMENT ARASHIELD': '19DH506'
     },
     optionGroup: {
       'STD SUEDE CUFFS':'',
@@ -1118,13 +1202,103 @@ export default {
     gear: 'Jacket'
   },
 
+  NECK_HANGER_LOOP: {
+    label: 'Neck Hanger Loop',
+    attribute: 'NECK HANGER LOOP',
+    type: 'radioButtons',
+    data: 'tk-platform',
+    optionNumber: {
+      'CLR LOOP': 'N1STCH01',
+    },
+    optionGroup: {
+      'CLR LOOP': 'MISCELLANEOUS',
+    },
+    optionType: {
+      'CLR LOOP': 'OTHER',
+    },
+    gear: 'Jacket'
+  },
+
+  THERMAL_LINER_POCKET: {
+    label: 'Thermal Liner Pocket',
+    attribute: 'THERMAL LINER POCKET',
+    type: 'radioButtons',
+    data: 'tk-platform',
+    optionNumber: {
+      'Std. Liner Pkt - Left': 'N1STLP02',
+    },
+    optionGroup: {
+      'Std. Liner Pkt - Left': 'PCKT',
+    },
+    optionType: {
+      'Std. Liner Pkt - Left': 'THRML',
+    },
+    gear: 'Jacket'
+  },
+
+  LINER_ATTACHMENT_SHELL: {
+    label: 'Liner Attachment (Shell)',
+    attribute: 'LINER ATTACHMENT (SHELL)',
+    type: 'radioButtons',
+    data: 'tk-platform',
+    optionNumber: {
+      'NECK SNAPS COLLAR': 'N1STNSS1',
+    },
+    optionGroup: {
+      'NECK SNAPS COLLAR': 'MISCELLANEOUS',
+    },
+    optionType: {
+      'NECK SNAPS COLLAR': 'OTHER',
+    },
+    gear: 'Jacket'
+  },
+
+  LINER_ATTACHMENT_LINER: {
+    label: 'Liner Attachment (Liner)',
+    attribute: 'LINER ATTACHMENT (LINER)',
+    type: 'radioButtons',
+    data: 'tk-platform',
+    optionNumber: {
+      'NECK SNAPS LINER': 'N1STNSL1',
+    },
+    optionGroup: {
+      'NECK SNAPS LINER': 'MISCELLANEOUS',
+    },
+    optionType: {
+      'NECK SNAPS LINER': 'OTHER',
+    },
+    gear: 'Jacket'
+  },
+
+  DRD_STRAP: {
+    label: 'Drd Strap',
+    attribute: 'DRD STRAP',
+    type: 'radioButtons',
+    data: 'tk-platform',
+    optionNumber: {
+      'DRD': 'N1STDRD',
+    },
+    optionGroup: {
+      'DRD': 'MISCELLANEOUS',
+    },
+    optionType: {
+      'DRD': 'OTHER',
+    },
+    gear: 'Jacket'
+  },
+  /**************************************************
+   *************** Pants Options ********************
+   **************************************************/
+
+  /*************** FRONT ****************************/
+
   PANT_FRONT_FRONTCLOSURE_BELT_LOOPS: {
     label: 'BELT LOOPS',
     attribute: 'PANT_FRONT_FRONTCLOSURE_BELT_LOOPS',
     type: 'radioButtons',
     data: 'tk-platform',
     optionNumber: {
-      'BLTLPS WD GPS': '',
+      'BLTLPS WD GPS': 'N200276G',
       'NONE':''
     },
     optionGroup: {
@@ -1144,9 +1318,9 @@ export default {
     type: 'radioButtons',
     data: 'tk-platform',
     optionNumber: {
-      'ESCAPE BLT':'',
-      'BLK NOMEX BLT GPS':'',
-      'NOMEX BLT/TUNNEL':''
+      'ESCAPE BLT':'N200301',
+      'BLK NOMEX BLT GPS':'N200255G',
+      'NOMEX BLT/TUNNEL':'N2STWC05'
     },
     optionGroup: {
       'ESCAPE BLT':'',
@@ -1184,15 +1358,16 @@ export default {
     gear: 'Pants'
   },
 
+   /***************PANT SIDE POCKETS (LEFT & RIGHT)****************************/
   PANT_SIDE_POCKETS_RIGHT_SIZE_TYPE: {
     label: 'SIZE AND TYPE',
     attribute: 'PANT_SIDE_POCKETS_RIGHT_SIZE_TYPE',
     type: 'radioButtons',
     data: 'tk-platform',
     optionNumber: {
-      'EXP PKT 2X10X10': '',
-      'ESCAPE SYSTEM POCKET CROSBY 2X7X8 RPKT': 'N242285',
-      'ESCAPE SYSTEM POCKET CMC 2X8X9 RPKT': 'N242389R',
+      'EXP PKT 2X10X10': 'N2STPK01',
+      'ESCAPE SYSTEM POCKET CROSBY 2X7X8 RPKT': 'N2(XX)285',
+      'ESCAPE SYSTEM POCKET CMC 2X8X9 RPKT': 'N2(XX)389R',
     },
     optionGroup: {
       'EXP PKT 2X10X10': '',
@@ -1207,15 +1382,49 @@ export default {
     gear: 'Pants'
   },
 
+  PANT_SIDE_POCKETS_RIGHT_INSIDE_REINFORCEMENT: {
+    label: 'Inside Reinforcement',
+    attribute: 'PANT_SIDE_POCKETS_RIGHT_INSIDE_REINFORCEMENT',
+    type: 'radioButtons',
+    data: 'tk-platform',
+    optionNumber: {
+      'Kevlar':'N2STPR01'
+    },
+    optionGroup: {
+      'Kevlar':'REINFORCEMENT'
+    },
+    optionType: {
+      'Kevlar':'POCKET'
+    },
+    gear: 'Pants'
+  },
+
+  PANT_SIDE_POCKETS_LEFT_INSIDE_REINFORCEMENT: {
+    label: 'Inside Reinforcement',
+    attribute: 'PANT_SIDE_POCKETS_LEFT_INSIDE_REINFORCEMENT',
+    type: 'radioButtons',
+    data: 'tk-platform',
+    optionNumber: {
+     'Kevlar':'N2STPR01'
+    },
+    optionGroup: {
+      'Kevlar':'REINFORCEMENT'
+    },
+    optionType: {
+      'Kevlar':'POCKET'
+    },
+    gear: 'Pants'
+  },
+
   PANT_SIDE_POCKETS_LEFT_SIZE_TYPE: {
     label: 'SIZE AND TYPE',
     attribute: 'PANT_SIDE_POCKETS_LEFT_SIZE_TYPE',
     type: 'radioButtons',
     data: 'tk-platform',
     optionNumber: {
-      'EXP PKT 2X10X10': '',
-      'ESCAPE SYSTEM POCKET CROSBY 2X7X8 LPKT': 'N242285L',
-      'ESCAPE SYSTEM POCKET CMC 2X8X9 LPKT': 'N242389',
+      'EXP PKT 2X10X10': 'N2STPK01',
+      'ESCAPE SYSTEM POCKET CROSBY 2X7X8 LPKT': 'N2(XX)285L',
+      'ESCAPE SYSTEM POCKET CMC 2X8X9 LPKT': 'N2(XX)389R',
     },
     optionGroup: {
       'EXP PKT 2X10X10': '',
@@ -1230,14 +1439,15 @@ export default {
     gear: 'Pants'
   },
 
+   /*************** OTHER ****************************/
   PANT_OTHER_PANTS_CUFF: {
     label: 'Pant Cuffs',
     attribute: 'PANT_OTHER_PANTS_CUFF',
     type: 'radioButtons',
     data: 'tk-platform',
     optionNumber: {
-      'STD SUEDE CUFFS':'',
-      'CUFF REINFORCEMENT DRAGONHIDE': 'N2STCRA1',
+      'STD SUEDE CUFFS':'N2STCR01',
+      'CUFF REINFORCEMENT DRAGONHIDE': '29DH109',
       ' CUFF REINFORCEMENT ARASHIELD': '2988109'
     },
     optionGroup: {
@@ -1259,9 +1469,9 @@ export default {
     type: 'radioButtons',
     data: 'tk-platform',
     optionNumber: {
-      'KNEE SHELL DRAGONHIDE ATX': 'N2STKRA1',
+      'KNEE SHELL DRAGONHIDE CATHEDRAL': 'N2DH104C',
       'KNEE SHELL BLACK SUEDE CATHEDRAL': '290105BC',
-      'KNEE SHELL ARASHIELD CATHEDRAL':''
+      'KNEE SHELL ARASHIELD CATHEDRAL':'N288104C'
     },
     optionGroup: {
       'KNEE SHELL DRAGONHIDE ATX': 'REINFORCEMENT',
@@ -1319,6 +1529,22 @@ export default {
     gear: 'Pants'
   },
 
+  PANT_OTHER_MANDATORY_CCHR: {
+    label: 'Mandatory CCHR',
+    attribute: 'PANT_OTHER_MANDATORY_CCHR',
+    type: 'radioButtons',
+    data: 'tk-platform',
+    optionNumber: {
+      'Additional CCHR Req': '2975615C',
+    },
+    optionGroup: {
+      'Additional CCHR Req': 'REINFORCEMENT',
+    },
+    optionType: {
+      'Additional CCHR Req': 'PADD',
+    },
+    gear: 'Pants'
+  },
 }
 
 

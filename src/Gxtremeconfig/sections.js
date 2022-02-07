@@ -93,6 +93,32 @@ export default [
         ],
       },
       {
+        label: 'RIGHT FRONT',
+        sections: [
+          {
+            label: 'Other Feature (Next to Stormflap)',
+            inputs: ['RIGHT_FRONT_NEXTSF_HOLDERS'],
+          },
+          // {
+          //   label: 'Other Feature (Nehind Base Pocket)',
+          //   inputs: ['rightFrontBehindBasePocketHolders'],
+          // }
+        ],
+      },
+      {
+        label: 'LEFT FRONT',
+        sections: [
+          {
+            label: 'Other Feature (Next to Stormflap)',
+            inputs: ['LEFT_FRONT_NEXTSF_HOLDERS'],
+          },
+          // {
+          //   label: 'Other Feature (Nehind Base Pocket)',
+          //   inputs: ['leftFrontBehindBasePocketHolders'],
+          // }
+        ],
+      },
+      {
         label: 'RIGHT SLEEVE',
         sections: [
           {
@@ -161,12 +187,18 @@ export default [
       {
         label: 'OTHER',
         sections: [
-          
+          {
+            label: 'Sleeve Well Configuration',
+            inputs: ['SLEEVE_WELL'],
+          },
           {
             label: 'Wrister (Liner) Adjustable Sleevewell',
             inputs: ['WRISTER_LINER'],
           },
-          
+          {
+            label: 'Wrister (Liner) Thumb Hole Loop',
+            inputs: ['WRISTER_LINER_THUMB_HOLE_LOOP'],
+          },
           {
             label: 'Sleeve Cuffs',
             inputs: ['SLEEVE_CUFFS'],
@@ -176,7 +208,26 @@ export default [
             label: 'Globeguard',
             inputs: ['GLOBE_GUARD'],
           },
-          
+          {
+            label: 'Neck Hanger Loop',
+            inputs: ['NECK_HANGER_LOOP'],
+          },
+          {
+            label: 'Thermal Liner Pocket',
+            inputs: ['THERMAL_LINER_POCKET'],
+          },
+          {
+            label: 'Liner Attachment (Shell)',
+            inputs: ['LINER_ATTACHMENT_SHELL'],
+          },
+          {
+            label: 'Liner Attachment (Liner)',
+            inputs: ['LINER_ATTACHMENT_LINER'],
+          },
+          {
+            label: 'DRD STRAP',
+            inputs: ['DRD_STRAP'],
+          },
         ],
       },
     ],
@@ -198,11 +249,11 @@ export default [
         sections: [
           {
             label: 'SIDE POCKETS (RIGHT)',
-            inputs: ['PANT_SIDE_POCKETS_RIGHT_SIZE_TYPE'],
+            inputs: ['PANT_SIDE_POCKETS_RIGHT_SIZE_TYPE','PANT_SIDE_POCKETS_RIGHT_INSIDE_REINFORCEMENT'],
           },
           {
             label: 'SIDE POCKETS (LEFT)',
-            inputs: ['PANT_SIDE_POCKETS_LEFT_SIZE_TYPE'],
+            inputs: ['PANT_SIDE_POCKETS_LEFT_SIZE_TYPE','PANT_SIDE_POCKETS_LEFT_INSIDE_REINFORCEMENT'],
           }
         ]
       },
@@ -225,7 +276,10 @@ export default [
             label: 'SUSPENDERS',
             inputs: ['PANT_OTHER_SUSPENDERS'],
           },
-          
+          {
+            label: 'Mandatory CCHR',
+            inputs: ['PANT_OTHER_MANDATORY_CCHR'],
+          }
         ]
       },
     ]
