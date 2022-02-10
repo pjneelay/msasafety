@@ -72,7 +72,7 @@ export const SecondaryBarItem = styled.div`
   cursor: ${props => (props.disabled ? 'default' : 'pointer')};
   opacity: ${props => (props.disabled ? 0.5 : 1)};
   border-radius: 5px;
-  width:7rem;
+  width:8rem;
   font-size:14px;
   font-weight:200;
   font-weight:bold !important;
