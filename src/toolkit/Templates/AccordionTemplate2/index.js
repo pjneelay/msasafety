@@ -342,10 +342,10 @@ const AccordionTemplate2 = ({
             <div>
               {newConfiguration[i].subHeader && previousSubHeader !== newConfiguration[i].subHeader ? <div className='group-header'>{newConfiguration[i].subHeader}</div> : null}
               <div key={i} className='group-content-row configuration-table-div'>
-                <dt className='configuration-table-attribute'>{newConfiguration[i].label}: </dt>
+                <dt className='configuration-table-attribute'>{newConfiguration[i].label}:</dt>
                 <dd className='configuration-table-optionNumber'>{newConfiguration[i].optionNumber}</dd>
                 {/* <dd className='configuration-table-optionGroup'>{newConfiguration[i].optionGroup ? <span className='dd--span__breadcrum'>|</span> : ""}{newConfiguration[i].optionGroup}</dd> */}
-                <dd className='configuration-table-optionDescription'>{newConfiguration[i].optionDescription? <span className='dd--span__breadcrum'>|</span> : ""}{newConfiguration[i].optionDescription}</dd>
+                <dd className='configuration-table-optionDescription'>{ newConfiguration[i].optionDescription? <span className='dd--span__breadcrum'>|</span> : ""}{newConfiguration[i].optionDescription}</dd>
               </div>
             </div>)
         }
@@ -505,7 +505,7 @@ const AccordionTemplate2 = ({
           <div className='configuration-wrapper'>
           <div className="summary--padding" >
             <span style={{color: "#57585A",display:'flex',justifyContent:'center'}}>Images displayed are for illustration purposes only. Actual product may vary.
-              <a href="https://globe.msasafety.com/configurator/support">Learn more</a> 
+              <a href="https://globe.msasafety.com/configurator/support" target="_blank" style={{marginLeft:'0.7rem'}}> Learn more</a> 
             </span>
             <br></br>
             <h2 style={{color: "#57585A",display:'flex',justifyContent:'center',color:'#00A94E'}}>CONFIGURATION</h2>
@@ -524,7 +524,7 @@ const AccordionTemplate2 = ({
           <div className='lettering-wrapper'>
           <div className="summary--padding" >
             <span style={{color: "#57585A",display:'flex',justifyContent:'center'}}>Images displayed are for illustration purposes only. Actual product may vary.
-              <a href="https://globe.msasafety.com/configurator/support">Learn more</a> 
+              <a href="https://globe.msasafety.com/configurator/support" target="_blank" style={{marginLeft:'0.7rem'}}> Learn more</a> 
             </span>
             <br></br>
             <h2 style={{color: "#57585A",display:'flex',justifyContent:'center',color:'#00A94E'}}>LETTERING</h2>
@@ -551,7 +551,7 @@ const AccordionTemplate2 = ({
           <div className='submit-wrapper'>
           <div className="summary--padding" >
             <span style={{color: "#57585A",display:'flex',justifyContent:'center'}}>Images displayed are for illustration purposes only. Actual product may vary.
-              <a href="https://globe.msasafety.com/configurator/support">Learn more</a> 
+              <a href="https://globe.msasafety.com/configurator/support" target="_blank" style={{marginLeft:'0.7rem'}}> Learn more</a> 
             </span>
             <br></br>
             <h2 style={{color: "#57585A",display:'flex',justifyContent:'center',color:'#00A94E'}}>SHARE VIA EMAIL</h2>

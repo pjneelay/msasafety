@@ -425,6 +425,7 @@ dd{
     font-size: 1em;
     margin-bottom: 0.5em;
     margin-left: 0;
+    margin-right: 1rem;
 }
 /* #root .configuration-table-optionGroup{
     width: 25%;
